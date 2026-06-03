@@ -37,7 +37,7 @@ const GLOBAL_CSS = `
   .t-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
   .t-logo-text{font-family:var(--fh);font-size:22px;font-weight:800;color:#243F5E;letter-spacing:-0.02em}
   .t-logo-text span{color:var(--red)}
-  .t-nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+  .t-nav-links{display:flex;align-items:center;gap:18px;list-style:none}
   .t-nav-links a{font-size:14px;font-weight:500;color:var(--gray-600);transition:color 0.2s;cursor:pointer}
   .t-nav-links a:hover{color:var(--blue)}
   .t-nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
@@ -331,9 +331,10 @@ const GLOBAL_CSS = `
 
   /* Team cards */
   .t-team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-  .t-team-card{border:1px solid var(--gray-100);border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:border-color 0.2s}
+  .t-team-card{border:1px solid var(--gray-100);border-radius:16px;padding:24px;display:flex;gap:20px;align-items:flex-start;transition:border-color 0.2s}
   .t-team-card:hover{border-color:var(--blue-100)}
-  .t-team-av{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:16px;flex-shrink:0}
+  .t-team-av{  width:80px;height:80px;border-radius:16px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:22px;}
+  .t-team-av img{width:100%;height:100%;object-fit:cover;display:block;}
   .t-team-name{font-size:15px;font-weight:700}
   .t-team-title{font-size:12px;font-weight:600;color:var(--blue);margin:2px 0 8px}
   .t-team-bio{font-size:13px;color:var(--gray-500);line-height:1.65}
@@ -475,22 +476,22 @@ const TIMELINE_STEPS = [
    REUSABLE COMPONENTS
 ───────────────────────────────────────────── */
 
-
-const Logo = ({ size }: { size?: number }) => {
-  const height = size ?? 35;
-  const width = Math.round(height * (130 / 35));
-  return (
-    <div className="t-logo">
-      <Image
-        src="/images/logo.png"
-        alt="Talenti"
-        width={width}
-        height={height}
-        priority
-      />
-    </div>
-  );
-};
+const Logo = ({ size = 50 }: { size?: number }) => (
+  <div className="t-logo">
+    <Image
+      src="/images/logo.png"
+      alt="Talenti"
+      width={198}
+      height={50}
+      quality={100}
+      priority
+      style={{
+        width: "auto",
+        height: "50px",
+      }}
+    />
+  </div>
+);
 
 const Ic = ({ name, style }: { name: string; style?: CSSProperties }) => <i className={`ti ti-${name}`} style={style} aria-hidden="true" />;
 
@@ -560,9 +561,9 @@ const BLOGS = [
 ];
 
 const TEAM = [
-  { init: "KB", bg: "#EFF6FF", ic: "#2563EB", name: "Kunal Bhatia",  title: "Founder & Managing Director",      bio: "With 19+ years in HR and business consulting, Kunal founded Talenti in 2009 with a vision to deliver world-class HR solutions to SMEs and enterprises worldwide. His expertise spans executive search, strategic RPO, L&D, and AI-driven talent acquisition." },
-  { init: "RS", bg: "#ECFDF5", ic: "#059669", name: "Rohit Singh",   title: "Co-Founder & Consulting Partner",  bio: "Graduated from Niagara College of Canada and post-graduated from the University of Sydney, Rohit brings 15 years of experience in HR and training. He built a search firm from scratch, innovating business models that help companies save cost and time while hiring the best talent." },
-  { init: "SB", bg: "#FDF6EC", ic: "#C8A96B", name: "Shikha Bhatia", title: "Consulting Partner — IT & Europe", bio: "Shikha specialises in technology recruitment for consulting and product development firms, with extensive experience sourcing talent across the UK and European markets. She leads CXO and leadership-level searches for captive centres in India." },
+  { init: "KB",image: "/images/kunal.png", bg: "#EFF6FF", ic: "#2563EB", name: "Kunal Bhatia",  title: "Founder & Managing Director",      bio: "With 19+ years in HR and business consulting, Kunal founded Talenti in 2009 with a vision to deliver world-class HR solutions to SMEs and enterprises worldwide. His expertise spans executive search, strategic RPO, L&D, and AI-driven talent acquisition." },
+  { init: "RS", image: "/images/rohit.png", bg: "#ECFDF5", ic: "#059669", name: "Rohit Singh",   title: "Co-Founder & Consulting Partner",  bio: "Graduated from Niagara College of Canada and post-graduated from the University of Sydney, Rohit brings 15 years of experience in HR and training. He built a search firm from scratch, innovating business models that help companies save cost and time while hiring the best talent." },
+  { init: "SB", image: "/images/shikha.png", bg: "#FDF6EC", ic: "#C8A96B", name: "Shikha Bhatia", title: "Consulting Partner — IT & Europe", bio: "Shikha specialises in technology recruitment for consulting and product development firms, with extensive experience sourcing talent across the UK and European markets. She leads CXO and leadership-level searches for captive centres in India." },
 ];
 
 const JOBS = [
@@ -591,7 +592,7 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
         <div className="t-prose">
           <div style={{ background: "linear-gradient(135deg,#EFF6FF,#F0F4FF)", borderRadius: 16, padding: "24px 28px", marginBottom: 24 }}>
             <div className="t-sec-tag t-tag-blue" style={{ marginBottom: 10 }}>Our Story — Since 2009</div>
-            <p style={{ fontSize: 16, color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.75, marginBottom: 0 }}>Founded in 2009 by Kunal Bhatia, Talenti HR Consulting Pvt. Ltd. was built on one belief: that every business deserves access to world-class HR expertise.</p>
+            <p style={{ fontSize: 16, color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.75, marginBottom: 0 }}>Founded in 2009 by Passionate Recruitment Leaders, Talenti HR Consulting Pvt. Ltd. was built on one belief: that every business deserves access to world-class HR expertise.</p>
           </div>
           <div className="t-about-stats">
             {[["2009","Founded"],["15+","Years Active"],["150+","Clients"],["10,000+","Placements"],["500K+","Resume DB"],["60+","Yrs Expertise"]].map(([v,l]) => (
@@ -617,8 +618,17 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
           <div className="t-team-grid">
             {TEAM.map(m => (
               <div key={m.init} className="t-team-card">
-                <div className="t-team-av" style={{ background: m.bg, color: m.ic }}>{m.init}</div>
-                <div><div className="t-team-name">{m.name}</div><div className="t-team-title">{m.title}</div><div className="t-team-bio">{m.bio}</div></div>
+                <div className="t-team-av" style={{ background: m.bg }}> <img
+                src={m.image}
+                alt={m.name}
+                onError={(e) => {
+                e.currentTarget.style.display = "none";
+                e.currentTarget.parentElement!.innerHTML = m.init;
+                }}
+                />
+          </div>
+                
+            <div><div className="t-team-name">{m.name}</div><div className="t-team-title">{m.title}</div><div className="t-team-bio">{m.bio}</div></div>
               </div>
             ))}
           </div>
@@ -1032,7 +1042,7 @@ export default function TalentiWebsite() {
         <div className="t-container">
           <div className="t-hero-grid">
             <div>
-              <div className="t-badge"><span className="t-badge-dot" />India's AI-First HR Consulting Platform — Since 2009</div>
+              <div className="t-badge"><span className="t-badge-dot" />Innovative HR Consulting Powered by AI — Since 2009</div>
               <h1 className="t-h1">Empowering Businesses Through <span className="t-hl">Smart HR Solutions</span> &amp; AI Innovation</h1>
               <p className="t-hero-sub">Since 2009, Talenti has been the trusted HR partner for SMEs and enterprises across India and globally — delivering expert recruitment, HR outsourcing, and strategic talent management powered by our TalentIQ platform.</p>
               <div className="t-hero-actions">
