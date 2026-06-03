@@ -476,17 +476,21 @@ const TIMELINE_STEPS = [
 ───────────────────────────────────────────── */
 
 
-const Logo = () => (
-  <div className="t-logo">
-    <Image
-      src="/images/logo.png"
-      alt="Talenti"
-      width={130}
-      height={35}
-      priority
-    />
-  </div>
-);
+const Logo = ({ size }: { size?: number }) => {
+  const height = size ?? 35;
+  const width = Math.round(height * (130 / 35));
+  return (
+    <div className="t-logo">
+      <Image
+        src="/images/logo.png"
+        alt="Talenti"
+        width={width}
+        height={height}
+        priority
+      />
+    </div>
+  );
+};
 
 const Ic = ({ name, style }: { name: string; style?: CSSProperties }) => <i className={`ti ti-${name}`} style={style} aria-hidden="true" />;
 
@@ -802,7 +806,7 @@ const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
 
       <div className="t-timeline">
         <div className="t-timeline-track">
-          {TIMELINE_STEPS.map((step, i) => (
+          {TIMELINE_STEPS.map((step) => (
             <div className="t-tl-step t-fade" key={step.day}>
               <div
                 className={`t-tl-node${step.ai ? " ai" : ""}`}
@@ -944,7 +948,7 @@ export default function TalentiWebsite() {
         setToast({ message: "✅ Enquiry sent! We'll respond within 4 hours.", type: "success" });
         setForm({ name: "", company: "", email: "", phone: "", service: "", message: "" });
       }
-    } catch {
+    } catch (_err: unknown) {
       setFormError("Network error. Please check your connection and try again.");
       setToast({ message: "❌ Network error. Please try again.", type: "error" });
     } finally {
