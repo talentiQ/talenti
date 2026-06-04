@@ -554,11 +554,11 @@ const AI_FEATURES = [
 const INDUSTRIES = [
   { icon: "device-laptop",        title: "Information Technology", sub: "Product, SaaS, IT Services" },
   { icon: "building-factory-2",   title: "Manufacturing",          sub: "Auto, Heavy Engineering" },
-  { icon: "building-bank",        title: "BFSI",                   sub: "Banking, Finance, Insurance" },
-  { icon: "heart-rate-monitor",   title: "Healthcare",             sub: "Pharma, Hospitals, MedTech" },
+  { icon: "plane-departure",      title: "Greenfield Airports",    sub: "Project Phase, ORAT, Commercial, Operations & Maintenance" },
+  { icon: "crane",                title: "EPC & Infrastructure",   sub: "Power, Infrastructure, Engineering" },
   { icon: "solar-panel",          title: "Renewable Energy",       sub: "Solar, Wind, Green Tech" },
   { icon: "shopping-bag",         title: "Retail & E-Commerce",    sub: "D2C, Marketplace, FMCG" },
-  { icon: "truck",                title: "Logistics & Supply Chain",sub: "3PL, SCM, Last-mile" },
+  { icon: "building-bank",        title: "BFSI",                   sub: "Banking, Finance, Insurance" },
   { icon: "rocket",               title: "Startups & Growth Stage",sub: "Series A–D, VC-backed" },
 ];
 
@@ -1038,7 +1038,7 @@ export default function TalentiWebsite() {
             </button>
           </div>
           <div className="t-mob-links">
-            {["services","process","ai-platform","industries","why-talenti","blog","contact"].map(id => (
+            {["services","industries","process","why-talenti","ai-platform","blog","contact"].map(id => (
               <a key={id} onClick={() => scrollTo(id)} style={{ textTransform: "capitalize" }}>{id.replace("-"," ")}</a>
             ))}
           </div>
@@ -1056,7 +1056,7 @@ export default function TalentiWebsite() {
           <div className="t-nav-inner">
             <Logo />
             <ul className="t-nav-links">
-              {[["services","Services"],["process","Process"],["ai-platform","AI Platform"],["industries","Industries"],["why-talenti","Why Talenti"],["contact","Contact"]].map(([id,label]) => (
+              {[["services","Services"],["industries","Industries"],["process","Process"],["why-talenti","Why Talenti"],["ai-platform","AI Platform"],["contact","Contact"]].map(([id,label]) => (
                 <li key={id}><a onClick={() => scrollTo(id)}>{label}</a></li>
               ))}
             </ul>
