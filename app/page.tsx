@@ -235,7 +235,7 @@ const GLOBAL_CSS = `
 
   /* INDUSTRIES */
   .t-ind{background:var(--gray-50)}
-  .t-ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+  //.t-ind-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .t-ind-card{background:white;border:1px solid var(--gray-100);border-radius:14px;padding:22px 18px;display:flex;align-items:center;gap:14px;transition:all 0.22s;cursor:default}
   .t-ind-card:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(37,99,235,0.1);transform:translateY(-2px)}
   .t-ind-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
@@ -244,6 +244,13 @@ const GLOBAL_CSS = `
   .t-ind-card:hover .t-ind-icon i{color:white}
   .t-ind-card h3{font-size:15px;font-weight:700}
   .t-ind-card p{font-size:12px;color:var(--gray-400);margin-top:2px}
+  @media(max-width:640px){
+  .t-ind-grid{grid-template-columns:1fr;gap:12px;}
+  .t-ind-card{padding:16px;}
+  .t-ind-card h3{font-size:14px;line-height:1.3;}
+  .t-ind-card p{font-size:12px;line-height:1.4;}
+  .t-ind-icon{width:40px;height:40px;flex-shrink:0;}
+}
 
   /* WHY */
   .t-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
