@@ -377,14 +377,17 @@ const GLOBAL_CSS = `
    same-size placeholder if not yet uploaded.
 ───────────────────────────────────────────── */
 const CLIENT_LOGOS = [
-  { name: "Bain",    file: "bain.png"        },
-  { name: "Duncan",      file: "duncan.png"           },
-  { name: "Jaquar",    file: "jaquar.png"         },
-  { name: "Noida Airport",  file: "nia.png"       },
+  { name: "Bain",         file: "bain.png"        },
+  { name: "Duncan",       file: "duncan.png"           },
+  { name: "Jaquar",       file: "jaquar.png"         },
+  { name: "Noida Airport",file: "nia.png"       },
   { name: "Toshiba",      file: "toshiba.png"           },
   { name: "Xebia",        file: "xebia.png"   },
-  { name: "HDFC Bank",   file: "hdfc.png"        },
-  { name: "Merino",        file: "merino.png"             },
+  { name: "HDFC Bank",    file: "hdfc.png"        },
+  { name: "Merino",       file: "merino.png"             },
+  { name: "TDSG",         file: "tdsg.png"             },
+  { name: "OCCL",         file: "occl.png"             },
+  { name: "Microlise",    file: "microlise.png"             },
 ];
 
 // Folder path served by Next.js from /public
