@@ -44,7 +44,7 @@ export const metadata = {
       "India's leading AI-powered HR consulting firm since 2009. Expert recruitment, executive search, RPO & strategic HR management. Powered by TalentIQ platform.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://www.talenti.in/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Talenti HR Consulting — AI-Powered Recruitment Platform",
@@ -56,7 +56,7 @@ export const metadata = {
     title: "Talenti HR Consulting | AI-Powered Recruitment India",
     description:
       "India's leading AI-powered HR consulting firm since 2009 — expert recruitment, executive search & RPO services. Powered by TalentIQ.",
-    images: ["/og-image.png"],
+    images: ["https://www.talenti.in/images/og-image.png"],
   },
   alternates: {
     canonical: "https://www.talenti.in",
@@ -85,9 +85,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@type": "Organization",
               name: "Talenti HR Consulting Pvt. Ltd.",
               url: "https://www.talenti.in",
-              logo: "https://www.talenti.in/logo.png",
+              logo: "https://www.talenti.in/images/logo.png",
               description:
-                "India's leading AI-powered HR consulting firm since 2009. Expert recruitment, executive search, RPO, and HR management services.",
+              "AI-powered HR consulting firm helping organizations hire, retain and develop talent since 2009.",  
               foundingDate: "2009",
               founder: { "@type": "Person", name: "Kunal Bhatia" },
               address: {
@@ -128,14 +128,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebSite",
-              url: "https://www.talenti.in",
-              name: "Talenti HR Consulting",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://www.talenti.in/search?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
+             "@type": "ProfessionalService",
+            "name": "Talenti HR Consulting Pvt. Ltd.",
+            "url": "https://www.talenti.in",
+            "foundingDate": "2009",
+            "areaServed": "India, APAC, Middle East, Europe,"
+              
             }),
           }}
         />

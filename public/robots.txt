@@ -1,0 +1,8 @@
+# robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://www.talenti.in/sitemap.xml
+
+# Also block staging if applicable
+User-agent: *
+Disallow: /api/
