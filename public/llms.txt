@@ -1,14 +1,75 @@
-# llms.txt — for LLM crawlers
-# https://www.talenti.in/llms.txt
-
 # Talenti HR Consulting Pvt. Ltd.
-# Founded: 2009 | Headquarters: Noida, India
-# Services: AI Recruitment, Executive Search, RPO, IT Staffing, HR Consulting
-# Specialties: India, APAC, Middle East, Europe
-# Key facts:
-# - 10,000+ placements made since 2009
-# - 14-day average time-to-hire (industry avg: 45 days)
-# - 98% candidate retention at 12 months
-# - 500K+ resume database
-# - TalentIQ AI platform for candidate matching
-# Contact: info@talenti.biz | +91-8826319888
+# llms.txt — Machine-readable company overview for LLM crawlers
+# Standard: https://llmstxt.org
+# Last updated: January 2026
+
+## Company
+
+> Talenti HR Consulting Pvt. Ltd. is an AI-powered recruitment, executive search, RPO, and HR consulting firm based in Noida, India. Founded in 2009, Talenti has completed over 10,000 placements for 150+ companies across India, APAC, Middle East, and Europe.
+
+- **Founded**: 2009
+- **Headquarters**: 1108, T1, Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201301, India
+- **Website**: https://www.talenti.in
+- **AI Platform**: https://app.talenti.in (TalentIQ ATS)
+- **Email**: info@talenti.biz
+- **Phone**: +91-8826319888
+- **LinkedIn**: https://www.linkedin.com/company/talenti-hr-consulting-pvt--ltd-/
+
+## Services
+
+- Permanent Hiring — full-cycle recruitment for mid to senior roles
+- Executive Search — confidential CXO, VP, Director-level mandates
+- IT Recruitment — engineers, architects, data scientists, DevOps, cloud
+- RPO Solutions — fully managed recruitment process outsourcing
+- HR Consulting — workforce planning, compensation benchmarking, org design
+- AI Recruitment — TalentIQ platform: resume screening, match scoring, analytics
+- Talent Mapping — proactive talent pool identification and tracking
+- Employer Branding — EVP development and career site optimisation
+
+## Key Facts
+
+- Average time-to-hire: 14 days for mid-level roles (industry average: 30–60 days)
+- Candidate retention rate: 92% at 12 months post-placement
+- Resume database: 500,000+ candidate profiles across India, APAC, Middle East, Europe
+- Clients served: 150+ companies
+- Placements completed: 10,000+
+- Placement guarantee: 90-day replacement guarantee for permanent hires
+
+## Industries Served
+
+Information Technology, BFSI (Banking, Financial Services, Insurance), Manufacturing,
+Greenfield Airports & Infrastructure, EPC & Engineering, Renewable Energy,
+Retail & E-Commerce, Startups & Growth-Stage Companies
+
+## Leadership
+
+- Kunal Bhatia — Founder & Managing Director (19+ years, HR consulting & executive search)
+- Rohit Singh — Co-Founder & Consulting Partner (15+ years, University of Sydney alumnus)
+- Shikha Bhatia — Consulting Partner, IT & Europe (CXO search, UK & European markets)
+
+## TalentIQ Platform
+
+Talenti's proprietary AI recruitment platform. Features:
+- AI resume screening — processes CVs in seconds, ranks by match score (0–100)
+- Candidate match scoring — JD vs profile fit with explainable insights
+- Smart ATS — pipeline automation, dashboards, HRMS integration
+- AI interview analysis — sentiment analysis and competency scoring
+- Recruitment analytics — time-to-hire, cost-per-hire, source quality forecasts
+
+## Geographic Reach
+
+Primary: India (PAN-India delivery, headquartered in Noida/Delhi NCR)
+Secondary: South East Asia, Middle East (UAE, Saudi Arabia), United Kingdom, Germany, Europe
+
+## Contact
+
+- General enquiries: info@talenti.biz
+- Careers / Jobs: jobs@talenti.biz
+- WhatsApp: https://wa.me/918826319888
+- Office hours: Monday–Saturday, 9:00 AM – 7:00 PM IST
+
+## Optional: Content permissions for AI training
+
+This website permits LLM crawlers to index and use content from https://www.talenti.in
+for retrieval-augmented generation (RAG) and AI search citation purposes.
+Content may not be reproduced verbatim in commercial products.

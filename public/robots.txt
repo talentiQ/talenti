@@ -1,8 +1,78 @@
-# robots.txt
+# robots.txt — Talenti HR Consulting Pvt. Ltd.
+# https://www.talenti.in/robots.txt
+
+# ── Standard search engines ─────────────────────────────────────
 User-agent: *
 Allow: /
-Sitemap: https://www.talenti.in/sitemap.xml
-
-# Also block staging if applicable
-User-agent: *
 Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# ── Google ───────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+# Allow Google to crawl CSS/JS for rendering
+User-agent: Googlebot-Image
+Allow: /images/
+
+# ── Bing ─────────────────────────────────────────────────────────
+User-agent: bingbot
+Allow: /
+Disallow: /api/
+
+# ── AI crawlers — allow all for GEO/citation indexing ────────────
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Amazon Alexa
+User-agent: ia_archiver
+Allow: /
+
+# Common Crawl (feeds AI training datasets — important for GEO)
+User-agent: CCBot
+Allow: /
+
+# ── Block bad bots ───────────────────────────────────────────────
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ── Sitemap ──────────────────────────────────────────────────────
+Sitemap: https://www.talenti.in/sitemap.xml
