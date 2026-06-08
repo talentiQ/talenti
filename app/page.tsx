@@ -29,8 +29,8 @@ const GLOBAL_CSS = `
   button{font-family:var(--fb);cursor:pointer}
   .t-container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 
-  .t-logo img {max-height: 35px;width: auto;object-fit:contain;image-rendering:auto;}
-  
+  .t-logo img{max-height:35px;width:auto;object-fit:contain;image-rendering:auto;}
+
   /* NAV */
   .t-nav{position:sticky;top:0;z-index:100;width:100%;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--gray-100)}
   .t-nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
@@ -83,7 +83,7 @@ const GLOBAL_CSS = `
   .t-dc-dots{display:flex;gap:6px}
   .t-dc-dot{width:10px;height:10px;border-radius:50%}
   .t-dc-title{font-size:12px;font-weight:600;color:var(--gray-500)}
-  .t-dc-live{background:#DCFCE7;color:#16A34A;font-size:10px;font-weight:700;padding:3px 8px;border-radius:100px}
+  .t-dc-live{background:#FEF9C3;color:#92400E;font-size:10px;font-weight:700;padding:3px 8px;border-radius:100px}
   .t-dc-body{padding:20px}
   .t-dc-sec-title{font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px}
   .t-cand-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--gray-50)}
@@ -100,6 +100,7 @@ const GLOBAL_CSS = `
   .t-dc-footer-text{font-size:12px;color:rgba(255,255,255,0.8)}
   .t-dc-footer-text strong{color:white;display:block;font-size:14px;font-weight:700}
   .t-dc-chip{background:rgba(255,255,255,0.15);color:white;font-size:11px;font-weight:700;padding:4px 10px;border-radius:8px}
+  .t-dc-demo-note{font-size:10px;color:var(--gray-400);text-align:center;padding:8px 20px 0;font-style:italic}
   .t-float-badge{position:absolute;background:white;border-radius:12px;padding:10px 14px;box-shadow:0 8px 24px rgba(0,0,0,0.12);display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--charcoal)}
   .t-fb1{top:-16px;right:-8px}
   .t-fb2{bottom:-8px;left:-16px}
@@ -166,10 +167,9 @@ const GLOBAL_CSS = `
   .t-svc-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--blue);margin-top:14px;opacity:0;transition:opacity 0.2s}
   .t-svc-card:hover .t-svc-link{opacity:1}
 
-  /* ── PROCESS TIMELINE ── */
+  /* PROCESS TIMELINE */
   .t-process{background:linear-gradient(145deg,#F0F4FF 0%,#EFF6FF 60%,#F8FAFC 100%)}
   .t-timeline{position:relative;margin-top:16px}
-  /* Desktop: horizontal connecting line */
   .t-timeline-track{display:flex;gap:0;position:relative;align-items:flex-start}
   .t-timeline-track::before{content:'';position:absolute;top:28px;left:28px;right:28px;height:2px;background:linear-gradient(90deg,var(--blue-100),var(--blue),var(--indigo),var(--blue),var(--blue-100));z-index:0;border-radius:1px}
   .t-tl-step{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;z-index:1;padding:0 8px}
@@ -181,14 +181,12 @@ const GLOBAL_CSS = `
   .t-tl-title{font-size:14px;font-weight:700;color:var(--charcoal);text-align:center;margin-bottom:6px;line-height:1.35}
   .t-tl-desc{font-size:12px;color:var(--gray-500);text-align:center;line-height:1.6}
   .t-tl-ai-pill{display:inline-flex;align-items:center;gap:4px;background:rgba(79,70,229,0.08);color:var(--indigo);font-size:10px;font-weight:700;padding:3px 8px;border-radius:100px;margin-top:6px;border:1px solid rgba(79,70,229,0.15)}
-  /* outcome card */
   .t-tl-outcome{background:var(--blue);border-radius:16px;padding:20px 24px;margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .t-tl-outcome-text{font-size:15px;font-weight:700;color:white}
   .t-tl-outcome-sub{font-size:13px;color:rgba(255,255,255,0.7);margin-top:3px}
   .t-tl-outcome-stat{text-align:right}
   .t-tl-outcome-val{font-family:var(--fh);font-size:32px;font-weight:800;color:white;line-height:1}
   .t-tl-outcome-lbl{font-size:12px;color:rgba(255,255,255,0.6);margin-top:3px}
-  /* Mobile: vertical stepper */
   @media(max-width:768px){
     .t-timeline-track{flex-direction:column;gap:0;align-items:stretch}
     .t-timeline-track::before{display:none}
@@ -216,7 +214,7 @@ const GLOBAL_CSS = `
   .t-ai-mockup{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:24px;backdrop-filter:blur(10px)}
   .t-ai-mok-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)}
   .t-ai-mok-title{font-family:var(--fh);font-size:14px;font-weight:700;color:white}
-  .t-ai-live{background:rgba(16,185,129,0.2);color:#6EE7B7;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px}
+  .t-ai-demo{background:rgba(200,169,107,0.2);color:#C8A96B;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px}
   .t-ai-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
   .t-ai-row:last-child{border-bottom:none}
   .t-ai-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
@@ -232,10 +230,10 @@ const GLOBAL_CSS = `
   .t-ai-ins{background:rgba(255,255,255,0.04);border-radius:10px;padding:12px}
   .t-ai-ins-val{font-family:var(--fh);font-size:22px;font-weight:800;color:white}
   .t-ai-ins-lbl{font-size:11px;color:var(--gray-500);margin-top:2px}
+  .t-ai-mockup-note{font-size:10px;color:var(--gray-600);text-align:center;margin-top:14px;font-style:italic}
 
   /* INDUSTRIES */
   .t-ind{background:var(--gray-50)}
-  //.t-ind-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .t-ind-card{background:white;border:1px solid var(--gray-100);border-radius:14px;padding:22px 18px;display:flex;align-items:center;gap:14px;transition:all 0.22s;cursor:default}
   .t-ind-card:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(37,99,235,0.1);transform:translateY(-2px)}
   .t-ind-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
@@ -245,12 +243,12 @@ const GLOBAL_CSS = `
   .t-ind-card h3{font-size:15px;font-weight:700}
   .t-ind-card p{font-size:12px;color:var(--gray-400);margin-top:2px}
   @media(max-width:640px){
-  .t-ind-grid{grid-template-columns:1fr;gap:12px;}
-  .t-ind-card{padding:16px;}
-  .t-ind-card h3{font-size:14px;line-height:1.3;}
-  .t-ind-card p{font-size:12px;line-height:1.4;}
-  .t-ind-icon{width:40px;height:40px;flex-shrink:0;}
-}
+    .t-ind-grid{grid-template-columns:1fr;gap:12px;}
+    .t-ind-card{padding:16px;}
+    .t-ind-card h3{font-size:14px;line-height:1.3;}
+    .t-ind-card p{font-size:12px;line-height:1.4;}
+    .t-ind-icon{width:40px;height:40px;flex-shrink:0;}
+  }
 
   /* WHY */
   .t-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -275,6 +273,7 @@ const GLOBAL_CSS = `
   .t-author-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:14px}
   .t-author-name{font-weight:700;font-size:14px}
   .t-author-role{font-size:12px;color:var(--gray-400)}
+  .t-test-disclaimer{text-align:center;font-size:12px;color:var(--gray-400);margin-top:28px;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
 
   /* FAQ */
   .t-faq-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -282,7 +281,7 @@ const GLOBAL_CSS = `
   .t-faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 0;font-size:15px;font-weight:600;font-family:var(--fb);color:var(--charcoal);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:color 0.2s}
   .t-faq-q:hover,.t-faq-q.active{color:var(--blue)}
   .t-faq-ans{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
-  .t-faq-ans.open{max-height:300px}
+  .t-faq-ans.open{max-height:320px}
   .t-faq-ans-inner{padding:0 0 18px;font-size:14px;color:var(--gray-500);line-height:1.75}
   .t-geo-box{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:18px;padding:32px;position:sticky;top:90px}
   .t-geo-box h3{font-size:20px;font-weight:700;margin-bottom:14px}
@@ -364,7 +363,7 @@ const GLOBAL_CSS = `
   .t-team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
   .t-team-card{border:1px solid var(--gray-100);border-radius:16px;padding:24px;display:flex;gap:20px;align-items:flex-start;transition:border-color 0.2s}
   .t-team-card:hover{border-color:var(--blue-100)}
-  .t-team-av{  width:80px;height:80px;border-radius:16px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:22px;}
+  .t-team-av{width:80px;height:80px;border-radius:16px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:22px;}
   .t-team-av img{width:100%;height:100%;object-fit:cover;display:block;}
   .t-team-name{font-size:15px;font-weight:700}
   .t-team-title{font-size:12px;font-weight:600;color:var(--blue);margin:2px 0 8px}
@@ -402,37 +401,31 @@ const GLOBAL_CSS = `
 
 /* ─────────────────────────────────────────────
    CLIENT LOGOS
-   Add real logo files to /public/images/logos/clients/
+   Drop files into /public/images/logos/clients/
    Filename must match the `file` field exactly.
-   Component auto-shows image if file exists,
-   same-size placeholder if not yet uploaded.
+   Placeholder shows automatically until file is uploaded.
 ───────────────────────────────────────────── */
 const CLIENT_LOGOS = [
-  { name: "Bain",         file: "bain.png"        },
-  { name: "Duncan",       file: "duncan.png"           },
-  { name: "Jaquar",       file: "jaquar.png"         },
-  { name: "Noida Airport",file: "nia.png"       },
-  { name: "Toshiba",      file: "toshiba.png"           },
-  { name: "Xebia",        file: "xebia.png"   },
-  { name: "HDFC Bank",    file: "hdfc.png"        },
-  { name: "Merino",       file: "merino.png"             },
-  { name: "TDSG",         file: "tdsg.png"             },
-  { name: "OCCL",         file: "occl.png"             },
-  { name: "Microlise",    file: "microlise.png"             },
+  { name: "Bain",          file: "bain.png"       },
+  { name: "Duncan",        file: "duncan.png"     },
+  { name: "Jaquar",        file: "jaquar.png"     },
+  { name: "Noida Airport", file: "nia.png"        },
+  { name: "Toshiba",       file: "toshiba.png"    },
+  { name: "Xebia",         file: "xebia.png"      },
+  { name: "HDFC Bank",     file: "hdfc.png"       },
+  { name: "Merino",        file: "merino.png"     },
+  { name: "TDSG",          file: "tdsg.png"       },
+  { name: "OCCL",          file: "occl.png"       },
+  { name: "Microlise",     file: "microlise.png"  },
 ];
 
-// Folder path served by Next.js from /public
 const LOGO_BASE = "/images/logos/clients/";
 
-type ClientLogoItemProps = {
-  name: string;
-  file: string;
-};
+type ClientLogoItemProps = { name: string; file: string };
 
 function ClientLogoItem({ name, file }: ClientLogoItemProps) {
   const [hasError, setHasError] = useState(false);
   const src = `${LOGO_BASE}${file}`;
-
   if (hasError) {
     return (
       <div className="t-client-logo-wrap">
@@ -440,17 +433,10 @@ function ClientLogoItem({ name, file }: ClientLogoItemProps) {
       </div>
     );
   }
-
   return (
     <div className="t-client-logo-wrap">
-      <img
-        src={src}
-        alt={`${name} logo`}
-        className="t-client-logo-img"
-        onError={() => setHasError(true)}
-        width={120}
-        height={48}
-      />
+      <img src={src} alt={`${name} logo`} className="t-client-logo-img"
+        onError={() => setHasError(true)} width={120} height={48} />
     </div>
   );
 }
@@ -459,153 +445,111 @@ function ClientLogoItem({ name, file }: ClientLogoItemProps) {
    PROCESS TIMELINE DATA
 ───────────────────────────────────────────── */
 const TIMELINE_STEPS = [
-  {
-    day: "Day 1",
-    icon: "clipboard-list",
-    title: "Mandate Briefing",
-    desc: "Deep-dive JD & culture alignment",
-    ai: false,
-    color: "#EFF6FF",
-    iconColor: "#2563EB",
-  },
-  {
-    day: "Day 2–4",
-    icon: "brain",
-    title: "AI Sourcing & Screening",
-    desc: "500K+ DB · Multi-channel · Match score · Skills · Pre-screening interviews",
-    ai: true,
-    color: "#EEF2FF",
-    iconColor: "#4F46E5",
-  },
-  {
-    day: "Day 5–11",
-    icon: "users",
-    title: "Client Interviews",
-    desc: "Structured rounds · Candidate & HM follow-ups for smooth process",
-    ai: false,
-    color: "#EFF6FF",
-    iconColor: "#2563EB",
-  },
-  {
-    day: "Day 12–13",
-    icon: "list-check",
-    title: "Selection",
-    desc: "Top 2–3 profiles shortlisted with backups ready",
-    ai: false,
-    color: "#ECFDF5",
-    iconColor: "#059669",
-  },
-  {
-    day: "Day 14",
-    icon: "trophy",
-    title: "Offer & Close",
-    desc: "Offer negotiation · Acceptance · Onboarding handoff",
-    ai: false,
-    color: "#FDF6EC",
-    iconColor: "#C8A96B",
-  },
+  { day: "Day 1",     icon: "clipboard-list", title: "Mandate Briefing",        desc: "Deep-dive JD & culture alignment",                                                             ai: false, color: "#EFF6FF", iconColor: "#2563EB" },
+  { day: "Day 2–4",  icon: "brain",           title: "AI Sourcing & Screening", desc: "500K+ profiles · Multi-channel sourcing · Match scoring · Skills assessment · Pre-screening", ai: true,  color: "#EEF2FF", iconColor: "#4F46E5" },
+  { day: "Day 5–11", icon: "users",           title: "Client Interviews",       desc: "Structured rounds · Candidate & hiring manager follow-ups for a smooth process",               ai: false, color: "#EFF6FF", iconColor: "#2563EB" },
+  { day: "Day 12–13",icon: "list-check",      title: "Selection",               desc: "Top 2–3 profiles shortlisted with backup candidates ready",                                    ai: false, color: "#ECFDF5", iconColor: "#059669" },
+  { day: "Day 14",   icon: "trophy",          title: "Offer & Close",           desc: "Offer negotiation · Acceptance · Onboarding handoff",                                          ai: false, color: "#FDF6EC", iconColor: "#C8A96B" },
 ];
 
 /* ─────────────────────────────────────────────
    REUSABLE COMPONENTS
 ───────────────────────────────────────────── */
-
 const Logo = ({ size = 35 }: { size?: number }) => (
   <div className="t-logo">
-    <Image
-      src="/images/logo.png"
-      alt="Talenti"
-      width={198}
-      height={50}
-      quality={75}
-      priority
-      style={{
-        width: "auto",
-        height: `${size}px`,
-      }}
-    />
+    <Image src="/images/logo.png" alt="Talenti HR Consulting" width={198} height={50}
+      quality={75} priority style={{ width: "auto", height: `${size}px` }} />
   </div>
 );
 
-const Ic = ({ name, style }: { name: string; style?: CSSProperties }) => <i className={`ti ti-${name}`} style={style} aria-hidden="true" />;
+const Ic = ({ name, style }: { name: string; style?: CSSProperties }) =>
+  <i className={`ti ti-${name}`} style={style} aria-hidden="true" />;
 
 /* ─────────────────────────────────────────────
    DATA
 ───────────────────────────────────────────── */
 const SERVICES = [
   { icon: "users",        title: "Permanent Hiring",   desc: "Full-cycle permanent recruitment for mid to senior-level roles across functions with AI-assisted sourcing and screening.", bg: "#EFF6FF", ic: "#2563EB" },
-  { icon: "crown",        title: "Executive Search",   desc: "Confidential CXO and VP-level search with deep market mapping, competitor intelligence, and culture-fit assessment.", bg: "#F0F4FF", ic: "#4F46E5" },
-  { icon: "code",         title: "IT Recruitment",     desc: "Specialized tech hiring for engineers, architects, data scientists, DevOps, cloud engineers, and emerging tech roles.", bg: "#ECFDF5", ic: "#059669" },
+  { icon: "crown",        title: "Executive Search",   desc: "Confidential CXO and VP-level search with deep market mapping, competitor intelligence, and culture-fit assessment.",     bg: "#F0F4FF", ic: "#4F46E5" },
+  { icon: "code",         title: "IT Recruitment",     desc: "Specialized tech hiring for engineers, architects, data scientists, DevOps, cloud engineers, and emerging tech roles.",   bg: "#ECFDF5", ic: "#059669" },
   { icon: "refresh",      title: "RPO Solutions",      desc: "Fully managed recruitment process outsourcing embedded within your organization — scalable, cost-efficient, AI-powered.", bg: "#FDF6EC", ic: "#C8A96B" },
-  { icon: "chart-bar",    title: "HR Consulting",      desc: "Strategic HR advisory covering workforce planning, HR redesign, compensation benchmarking, and org development.", bg: "#FFF7ED", ic: "#EA580C" },
-  { icon: "brain",        title: "AI Recruitment",     desc: "Deploy our AI resume engine, candidate match scoring, and predictive analytics to transform your talent acquisition.", bg: "#EEF2FF", ic: "#4F46E5" },
-  { icon: "map",          title: "Talent Mapping",     desc: "Identify, profile, and track top talent pools before you need to hire — giving you a decisive competitive edge.", bg: "#F0FDFA", ic: "#0D9488" },
-  { icon: "star",         title: "Employer Branding",  desc: "Build a magnetic employer brand that attracts top talent organically — EVP development and career site optimization.", bg: "#FEF2F2", ic: "#DC2626" },
+  { icon: "chart-bar",    title: "HR Consulting",      desc: "Strategic HR advisory covering workforce planning, HR redesign, compensation benchmarking, and org development.",         bg: "#FFF7ED", ic: "#EA580C" },
+  { icon: "brain",        title: "AI Recruitment",     desc: "Deploy our AI resume engine, candidate match scoring, and predictive analytics to transform your talent acquisition.",   bg: "#EEF2FF", ic: "#4F46E5" },
+  { icon: "map",          title: "Talent Mapping",     desc: "Identify, profile, and track top talent pools before you need to hire — giving you a decisive competitive edge.",        bg: "#F0FDFA", ic: "#0D9488" },
+  { icon: "star",         title: "Employer Branding",  desc: "Build a magnetic employer brand that attracts top talent organically — EVP development and career site optimization.",   bg: "#FEF2F2", ic: "#DC2626" },
 ];
 
 const AI_FEATURES = [
-  { icon: "file-search",      title: "AI Resume Screening",      desc: "Parse and score thousands of CVs in seconds — evaluate skills, experience depth, and role fitment automatically." },
-  { icon: "adjustments",      title: "Smart ATS",                desc: "A modern applicant tracking system with intelligent pipeline automation, role-based access, and real-time dashboards." },
-  { icon: "chart-dots-3",     title: "Candidate Match Scoring",  desc: "Proprietary engine scores candidates 0–100 against JD requirements, cultural signals, and historical placement data." },
-  { icon: "video",            title: "AI Interview Analysis",    desc: "Sentiment analysis, competency scoring, and automated feedback reports for every structured interview conducted." },
-  { icon: "report-analytics", title: "Recruitment Analytics",   desc: "Real-time reporting on time-to-hire, cost-per-hire, source effectiveness, pipeline health, and predictive forecasts." },
+  { icon: "file-search",      title: "AI Resume Screening",     desc: "Parse and score thousands of CVs in seconds — evaluate skills, experience depth, and role fitment automatically." },
+  { icon: "adjustments",      title: "Smart ATS",               desc: "A modern applicant tracking system with intelligent pipeline automation, role-based access, and real-time dashboards." },
+  { icon: "chart-dots-3",     title: "Candidate Match Scoring", desc: "Proprietary engine scores candidates 0–100 against JD requirements, cultural signals, and historical placement data." },
+  { icon: "video",            title: "AI Interview Analysis",   desc: "Sentiment analysis, competency scoring, and automated feedback reports for every structured interview conducted." },
+  { icon: "report-analytics", title: "Recruitment Analytics",  desc: "Real-time reporting on time-to-hire, cost-per-hire, source effectiveness, pipeline health, and predictive forecasts." },
 ];
 
 const INDUSTRIES = [
-  { icon: "device-laptop",        title: "Information Technology", sub: "Product, SaaS, IT Services" },
-  { icon: "building-factory-2",   title: "Manufacturing",          sub: "Auto, Heavy Engineering" },
-  { icon: "plane-departure",      title: "Greenfield Airports",    sub: "Project Phase, ORAT, Commercial, Operations & Maintenance" },
-  { icon: "crane",                title: "EPC & Infrastructure",   sub: "Power, Infrastructure, Engineering" },
-  { icon: "solar-panel",          title: "Renewable Energy",       sub: "Solar, Wind, Green Tech" },
-  { icon: "shopping-bag",         title: "Retail & E-Commerce",    sub: "D2C, Marketplace, FMCG" },
-  { icon: "building-bank",        title: "BFSI",                   sub: "Banking, Finance, Insurance" },
-  { icon: "rocket",               title: "Startups & Growth Stage",sub: "Series A–D, VC-backed" },
+  { icon: "device-laptop",      title: "Information Technology", sub: "Product, SaaS, IT Services" },
+  { icon: "building-factory-2", title: "Manufacturing",          sub: "Auto, Heavy Engineering" },
+  { icon: "plane-departure",    title: "Greenfield Airports",    sub: "Project Phase, ORAT, Commercial, Operations & Maintenance" },
+  { icon: "crane",              title: "EPC & Infrastructure",   sub: "Power, Infrastructure, Engineering" },
+  { icon: "solar-panel",        title: "Renewable Energy",       sub: "Solar, Wind, Green Tech" },
+  { icon: "shopping-bag",       title: "Retail & E-Commerce",    sub: "D2C, Marketplace, FMCG" },
+  { icon: "building-bank",      title: "BFSI",                   sub: "Banking, Finance, Insurance" },
+  { icon: "rocket",             title: "Startups & Growth Stage",sub: "Series A–D, VC-backed" },
 ];
 
 const WHY_ITEMS = [
-  { num: "01", icon: "bolt",         title: "60% Faster Hiring",          desc: "Our TalentIQ platform reduces time-to-hire from 45 days (industry avg) to just 14 days — without compromising quality or cultural alignment across all engagement types.", hl: "14-Day Avg. Time-to-Hire", hlIc: "trending-down" },
-  { num: "02", icon: "brain",        title: "AI-Enabled Sourcing",        desc: "Multi-channel AI sourcing across LinkedIn, job boards, and our proprietary TalentIQ database of 500K+ pre-screened profiles across India, APAC, Middle East, and Europe.", hl: "500K+ Resume Database", hlIc: "database" },
-  { num: "03", icon: "globe",        title: "Global Reach",               desc: "Deep recruitment infrastructure across India and active delivery capability in South East Asia, Middle East, UK, and European countries — with multilingual specialists on ground.", hl: "APAC · ME · Europe", hlIc: "map" },
-  { num: "04", icon: "building",     title: "Enterprise-Grade Delivery",  desc: "Dedicated account teams, SLA-driven delivery, weekly reporting dashboards, and seamless HRMS/ATS integration for enterprises of every scale.", hl: "SLA-Guaranteed", hlIc: "shield-check", bg: "#EEF2FF", ic: "#4F46E5" },
-  { num: "05", icon: "chart-bar",    title: "Data-Driven Hiring",         desc: "Every decision backed by real-time analytics — pipeline metrics, offer acceptance rates, source quality scores, and predictive headcount forecasting.", hl: "Analytics-First", hlIc: "chart-pie", bg: "#ECFDF5", ic: "#059669" },
-  { num: "06", icon: "users-group",  title: "60+ Years Combined Expertise", desc: "Our specialists bring a cumulative 60+ years in leadership, strategic HR, talent acquisition, psychometric assessment, training & development, and management consulting.", hl: "Since 2009", hlIc: "certificate", bg: "#FDF6EC", ic: "#8B6914" },
+  { num: "01", icon: "bolt",        title: "60% Faster Hiring",            desc: "Our TalentIQ platform significantly reduces time-to-hire compared to the industry average — without compromising quality or cultural alignment across all engagement types.", hl: "14-Day Avg. Time-to-Hire",     hlIc: "trending-down" },
+  { num: "02", icon: "brain",       title: "AI-Enabled Sourcing",          desc: "Multi-channel AI sourcing across LinkedIn, job boards, and our proprietary TalentIQ database of 500K+ candidate profiles across India, APAC, Middle East, and Europe.",       hl: "500K+ Candidate Profiles",     hlIc: "database" },
+  { num: "03", icon: "globe",       title: "Global Reach",                 desc: "Deep recruitment infrastructure across India and active delivery capability in South East Asia, Middle East, UK, and European countries — with multilingual specialists on ground.", hl: "APAC · ME · Europe",          hlIc: "map" },
+  { num: "04", icon: "building",    title: "Enterprise-Grade Delivery",    desc: "Dedicated account teams, SLA-driven delivery, weekly reporting dashboards, and seamless HRMS/ATS integration for enterprises of every scale.",                                  hl: "SLA-Driven Delivery",         hlIc: "shield-check", bg: "#EEF2FF", ic: "#4F46E5" },
+  { num: "05", icon: "chart-bar",   title: "Data-Driven Hiring",           desc: "Every decision backed by real-time analytics — pipeline metrics, offer acceptance rates, source quality scores, and predictive headcount forecasting.",                         hl: "Analytics-First",             hlIc: "chart-pie",    bg: "#ECFDF5", ic: "#059669" },
+  { num: "06", icon: "users-group", title: "60+ Years Combined Expertise", desc: "Our specialists bring a cumulative 60+ years in leadership, strategic HR, talent acquisition, psychometric assessment, training & development, and management consulting.",    hl: "Since 2009",                  hlIc: "certificate",  bg: "#FDF6EC", ic: "#8B6914" },
 ];
 
 const TESTIMONIALS = [
-  { initials: "RK", avBg: "#EFF6FF", avIc: "#2563EB", stars: 5,   quote: '"Talenti reduced our time-to-hire by over 55% for critical technology roles. Their AI matching was uncannily accurate — every shortlisted candidate was interview-ready. It felt like they already knew our culture before we briefed them."', name: "Rakesh Kapoor",    role: "CHRO, Global IT Services Firm" },
-  { initials: "AM", avBg: "#FDF6EC", avIc: "#C8A96B", stars: 5,   quote: '"We partnered with Talenti for an executive search mandate to find our VP of Engineering. Within 21 days they delivered 6 exceptional candidates — quality we couldn\'t find in 4 months through other firms. Exceptional."',                  name: "Anita Mehta",      role: "Founder & CEO, Series B FinTech Startup" },
-  { initials: "SP", avBg: "#F0F4FF", avIc: "#4F46E5", stars: 4.5, quote: '"Talenti\'s RPO solution scaled our hiring from 20 to 200 positions per month without any drop in quality. The analytics dashboard gave us real-time visibility that transformed how leadership made headcount decisions."',                       name: "Siddharth Patel",  role: "Head of Talent, Large Manufacturing Conglomerate" },
+  { initials: "RK", avBg: "#EFF6FF", avIc: "#2563EB", stars: 5,   quote: '"Talenti significantly reduced our time-to-hire for critical technology roles. Their AI-assisted matching was highly accurate — every shortlisted candidate was interview-ready. It felt like they already understood our culture before we briefed them."', name: "Rakesh K.",       role: "CHRO, IT Services Firm" },
+  { initials: "AM", avBg: "#FDF6EC", avIc: "#C8A96B", stars: 5,   quote: '"We partnered with Talenti for an executive search mandate to find our VP of Engineering. Within three weeks they delivered an exceptional shortlist — quality we could not find through other firms over several months. Highly recommended."',              name: "Anita M.",        role: "Founder & CEO, FinTech Startup" },
+  { initials: "SP", avBg: "#F0F4FF", avIc: "#4F46E5", stars: 4.5, quote: '"Talenti\'s RPO solution helped us scale our hiring substantially without any drop in quality. The analytics dashboard gave us real-time visibility that transformed how leadership made headcount decisions."',                                                 name: "Siddharth P.",    role: "Head of Talent, Manufacturing Conglomerate" },
 ];
 
 const FAQS = [
-  { q: "What is AI-powered recruitment and how does Talenti use it?",            a: "AI-powered recruitment uses machine learning to automate resume screening, score candidate-job fitment, analyze interview responses, and predict hiring success. Talenti's engine processes thousands of CVs in seconds, ranks candidates by match score (0–100), and provides explainable insights — reducing manual effort by up to 70% while improving placement quality." },
-  { q: "How is Talenti different from traditional HR consulting firms?",          a: "Traditional HR firms rely on manual screening and personal networks. Talenti combines domain expertise with AI tools — a smart ATS, resume match engine, and predictive analytics — delivering 60% faster, more accurate, data-driven hiring. Our average time-to-hire is 14 days vs the industry average of 45+ days." },
-  { q: "What industries and roles does Talenti specialize in?",                   a: "Talenti serves 18+ industries including IT, BFSI, manufacturing, healthcare, renewable energy, retail, logistics, and startups. We handle roles from entry-level to CXO across all functions — technology, finance, operations, sales, marketing, and HR with specialist teams per vertical." },
-  { q: "How long does the typical hiring process take with Talenti?",             a: "Our average time-to-hire is 14 days for mid-level roles, 21–28 days for senior positions, and 30–45 days for CXO executive search. AI-driven sourcing and screening allows us to present a qualified shortlist within 3–5 business days of receiving a mandate." },
-  { q: "What is RPO and is it right for my organization?",                        a: "Recruitment Process Outsourcing (RPO) means Talenti acts as your embedded recruitment team — managing the entire hiring lifecycle. RPO is ideal for companies hiring 50+ roles annually, experiencing rapid growth, or looking to reduce cost-per-hire by 30–40% while improving quality and compliance." },
-  { q: "Does Talenti offer HR consulting beyond recruitment?",                    a: "Yes. Our HR consulting practice covers workforce planning, HR process redesign, compensation benchmarking, performance management frameworks, HR technology advisory, and organizational development — partnering with CHROs to build future-ready people functions." },
-  { q: "How accurate is Talenti's AI candidate matching system?",                 a: "Our AI match engine achieves 96% accuracy in predicting interview-to-offer conversion when candidates score above 85%. The system is trained on 10,000+ successful placements and continuously improves. Clients see 3x higher interview-to-hire ratios compared to unassisted sourcing." },
-  { q: "What is Talenti's placement guarantee and retention rate?",               a: "Talenti offers a 90-day replacement guarantee for permanent placements at no additional cost. Our candidate retention rate is 98% at 12 months post-placement — significantly above the industry average of 78% — testament to our AI-assisted culture-fit precision." },
+  { q: "What is AI-powered recruitment and how does Talenti use it?",
+    a: "AI-powered recruitment uses machine learning to automate resume screening, score candidate-job fitment, analyse interview responses, and support hiring decisions. Talenti's TalentIQ engine processes large volumes of CVs quickly, ranks candidates by match score, and provides structured insights — helping reduce manual screening effort and improve shortlist quality. Results vary by mandate and organisation." },
+  { q: "How is Talenti different from traditional HR consulting firms?",
+    a: "Traditional HR firms rely primarily on manual screening and personal networks. Talenti combines domain expertise with AI tools — including a smart ATS, resume match engine, and recruitment analytics — to deliver faster, more data-driven hiring outcomes. Our average time-to-hire for mid-level roles is around 14 days, compared to the typical 30–60 days seen across many organisations." },
+  { q: "What industries and roles does Talenti specialize in?",
+    a: "Talenti serves multiple industries including IT, BFSI, manufacturing, airports & infrastructure, renewable energy, retail, EPC, and startups. We handle roles from mid-level to CXO across functions — technology, finance, operations, sales, marketing, and HR — with specialist teams per vertical." },
+  { q: "How long does the typical hiring process take with Talenti?",
+    a: "Our average time-to-hire is approximately 14 days for mid-level roles, 21–28 days for senior positions, and 30–45 days for CXO executive search. AI-driven sourcing and screening allows us to present a qualified shortlist within 3–5 business days of receiving a confirmed mandate. Timelines may vary based on role complexity and client responsiveness." },
+  { q: "What is RPO and is it right for my organization?",
+    a: "Recruitment Process Outsourcing (RPO) means Talenti acts as your embedded recruitment team — managing the entire hiring lifecycle. RPO is well-suited for companies with high or growing hiring volumes, or those looking to improve quality and consistency across their talent acquisition process. Outcomes and cost savings vary by organisation size and scope of engagement." },
+  { q: "Does Talenti offer HR consulting beyond recruitment?",
+    a: "Yes. Our HR consulting practice covers workforce planning, HR process redesign, compensation benchmarking, performance management frameworks, HR technology advisory, and organisational development — partnering with CHROs to build future-ready people functions." },
+  { q: "How does Talenti's AI candidate matching system work?",
+    a: "TalentIQ scores candidates against JD requirements, including skills, experience depth, and role-specific criteria. The system has been refined across thousands of placements and improves over time. Match scores are a decision-support tool — final candidate selection always involves our specialist consultants working with client hiring teams." },
+  { q: "What is Talenti's placement guarantee?",
+    a: "Talenti offers a 90-day replacement guarantee for permanent placements, subject to engagement terms and conditions. The guarantee applies where the original role specification remains materially unchanged and separation does not arise from client-side restructuring or budget changes. Please refer to our Terms of Service or speak with your account team for full details." },
 ];
 
 const BLOGS = [
-  { bg: "#EFF6FF", ic: "brain",   icColor: "#BFDBFE", cat: "AI & Recruitment",  title: "The Rise of AI in Executive Search: How Machine Intelligence Is Transforming C-Suite Hiring",        desc: "AI tools are reshaping how executive recruiters identify and engage senior leadership candidates.",                                           date: "May 2025 · 8 min read" },
-  { bg: "#F0F4FF", ic: "refresh", icColor: "#C7D2FE", cat: "RPO Strategy",      title: "How RPO Is Transforming Enterprise Hiring in India — and Why Now Is the Time to Act",                  desc: "How mid-market Indian companies are using RPO to scale hiring 10x faster while reducing cost.",                                              date: "Apr 2025 · 6 min read" },
-  { bg: "#FDF6EC", ic: "star",    icColor: "#FDE68A", cat: "Employer Branding",  title: "Building a Magnetic Employer Brand in the Age of AI: A Practical 2025 Playbook",                       desc: "As AI changes how candidates evaluate employers, your EVP and digital presence have never mattered more.",                                   date: "Mar 2025 · 7 min read" },
+  { bg: "#EFF6FF", ic: "brain",   icColor: "#BFDBFE", cat: "AI & Recruitment", title: "The Rise of AI in Executive Search: How Machine Intelligence Is Transforming C-Suite Hiring",       desc: "AI tools are reshaping how executive recruiters identify and engage senior leadership candidates.",                date: "May 2025 · 8 min read" },
+  { bg: "#F0F4FF", ic: "refresh", icColor: "#C7D2FE", cat: "RPO Strategy",     title: "How RPO Is Transforming Enterprise Hiring in India — and Why Now Is the Time to Act",                 desc: "How mid-market Indian companies are using RPO to scale hiring faster while managing cost and quality.",           date: "Apr 2025 · 6 min read" },
+  { bg: "#FDF6EC", ic: "star",    icColor: "#FDE68A", cat: "Employer Branding", title: "Building a Magnetic Employer Brand in the Age of AI: A Practical 2025 Playbook",                      desc: "As AI changes how candidates evaluate employers, your EVP and digital presence have never mattered more.",        date: "Mar 2025 · 7 min read" },
 ];
 
 const TEAM = [
-  { init: "KB",image: "/images/kunal.png", bg: "#EFF6FF", ic: "#2563EB", name: "Kunal Bhatia",  title: "Founder & Managing Director",      bio: "With 19+ years in HR and business consulting, Kunal founded Talenti in 2009 with a vision to deliver world-class HR solutions to SMEs and enterprises worldwide. His expertise spans executive search, strategic RPO, L&D, and AI-driven talent acquisition." },
-  { init: "RS", image: "/images/rohit.png", bg: "#ECFDF5", ic: "#059669", name: "Rohit Singh",   title: "Co-Founder & Consulting Partner",  bio: "Graduated from Niagara College of Canada and post-graduated from the University of Sydney, Rohit brings 15 years of experience in HR and training. He built a search firm from scratch, innovating business models that help companies save cost and time while hiring the best talent." },
+  { init: "KB", image: "/images/kunal.png",  bg: "#EFF6FF", ic: "#2563EB", name: "Kunal Bhatia",  title: "Founder & Managing Director",      bio: "With 19+ years in HR and business consulting, Kunal founded Talenti in 2009 with a vision to deliver world-class HR solutions to SMEs and enterprises worldwide. His expertise spans executive search, strategic RPO, L&D, and AI-driven talent acquisition." },
+  { init: "RS", image: "/images/rohit.png",  bg: "#ECFDF5", ic: "#059669", name: "Rohit Singh",   title: "Co-Founder & Consulting Partner",  bio: "Graduated from Niagara College of Canada and post-graduated from the University of Sydney, Rohit brings 15 years of experience in HR and training. He built a search firm from scratch, innovating business models that help companies save cost and time while hiring the best talent." },
   { init: "SB", image: "/images/shikha.png", bg: "#FDF6EC", ic: "#C8A96B", name: "Shikha Bhatia", title: "Consulting Partner — IT & Europe", bio: "Shikha specialises in technology recruitment for consulting and product development firms, with extensive experience sourcing talent across the UK and European markets. She leads CXO and leadership-level searches for captive centres in India." },
 ];
 
 const JOBS = [
-  { dept: "Recruitment",  title: "Senior Technical Recruiter — IT & Product",  loc: "Delhi / Remote",        type: "Full-time" },
-  { dept: "Technology",   title: "Full Stack Developer (Next.js + Supabase)",   loc: "Noida / Hybrid",        type: "Full-time" },
-  { dept: "Sales",        title: "Business Development Manager — Enterprise",   loc: "Mumbai / Bangalore",    type: "Full-time" },
-  { dept: "Recruitment",  title: "Executive Search Consultant — BFSI",          loc: "Delhi NCR",             type: "Full-time" },
-  { dept: "Operations",   title: "RPO Delivery Lead",                            loc: "Hyderabad / Remote",    type: "Full-time" },
+  { dept: "Recruitment", title: "Senior Technical Recruiter — IT & Product",  loc: "Delhi / Remote",     type: "Full-time" },
+  { dept: "Technology",  title: "Full Stack Developer (Next.js + Supabase)",  loc: "Noida / Hybrid",     type: "Full-time" },
+  { dept: "Sales",       title: "Business Development Manager — Enterprise",  loc: "Mumbai / Bangalore", type: "Full-time" },
+  { dept: "Recruitment", title: "Executive Search Consultant — BFSI",         loc: "Delhi NCR",          type: "Full-time" },
+  { dept: "Operations",  title: "RPO Delivery Lead",                           loc: "Hyderabad / Remote", type: "Full-time" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -626,21 +570,23 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
         <div className="t-prose">
           <div style={{ background: "linear-gradient(135deg,#EFF6FF,#F0F4FF)", borderRadius: 16, padding: "24px 28px", marginBottom: 24 }}>
             <div className="t-sec-tag t-tag-blue" style={{ marginBottom: 10 }}>Our Story — Since 2009</div>
-            <p style={{ fontSize: 16, color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.75, marginBottom: 0 }}>Founded in 2009 by Passionate Recruitment Leaders, Talenti HR Consulting Pvt. Ltd. was built on one belief: that every business deserves access to world-class HR expertise.</p>
+            <p style={{ fontSize: 16, color: "var(--charcoal)", fontWeight: 500, lineHeight: 1.75, marginBottom: 0 }}>
+              Founded in 2009 by passionate recruitment leaders, Talenti HR Consulting Pvt. Ltd. was built on one belief: that every business deserves access to world-class HR expertise.
+            </p>
           </div>
           <div className="t-about-stats">
-            {[["2009","Founded"],["15+","Years Active"],["150+","Clients"],["10,000+","Placements"],["500K+","Resume DB"],["60+","Yrs Expertise"]].map(([v,l]) => (
+            {[["2009","Founded"],["15+","Years Active"],["150+","Clients Served"],["10,000+","Placements"],["500K+","Candidate Profiles"],["60+","Yrs Combined Expertise"]].map(([v,l]) => (
               <div key={l} className="t-about-stat"><div className="t-about-stat-val">{v}</div><div className="t-about-stat-lbl">{l}</div></div>
             ))}
           </div>
           <h3>Who We Are</h3>
-          <p>Talenti HR Consulting Pvt. Ltd. is a specialised HR services and consulting firm that partners with small, mid-sized, and enterprise organisations to solve their people challenges.</p>
+          <p>Talenti HR Consulting Pvt. Ltd. is a specialised HR services and consulting firm that partners with small, mid-sized, and enterprise organisations to solve their people challenges. We combine deep industry knowledge with AI-powered tools to deliver measurably better hiring outcomes.</p>
           <h3>Global Reach</h3>
-          <p>Active delivery capability and client relationships across <strong>APAC, Middle East, UK, and European countries</strong>.</p>
+          <p>Active delivery capability and client relationships across <strong>APAC, Middle East, UK, and European countries</strong>. We provide the expertise, advice, and support to make cross-border recruitment smooth for both clients and candidates.</p>
           <h3>Our Mission</h3>
           <p>To deliver innovative, reliable, and cost-effective HR solutions that enable our clients to attract, develop, and retain the best talent — in India and globally.</p>
           <h3>Corporate Office</h3>
-          <p>Talenti HR Consulting Pvt. Ltd. · 1108, T1,Assotech Business Cresterra, Sector 135, Noida <br />📞 +91-8826319888 &nbsp;·&nbsp; 📧 info@talenti.biz &nbsp;·&nbsp; 🌐 www.talenti.in</p>
+          <p>Talenti HR Consulting Pvt. Ltd.<br />1108, T1, Assotech Business Cresterra, Sector 135, Noida<br />📞 +91-8826319888 &nbsp;·&nbsp; 📧 info@talenti.biz &nbsp;·&nbsp; 🌐 www.talenti.in</p>
         </div>
       ),
     },
@@ -648,21 +594,19 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
       title: "Leadership Team",
       body: (
         <div>
-          <p style={{ fontSize: 14, color: "var(--gray-500)", marginBottom: 24, lineHeight: 1.75 }}>Our founding partners bring a cumulative 60+ years of experience in leadership, strategic HR, and talent acquisition.</p>
+          <p style={{ fontSize: 14, color: "var(--gray-500)", marginBottom: 24, lineHeight: 1.75 }}>Our founding partners bring a cumulative 60+ years of experience in leadership, strategic HR, talent acquisition, and management consulting across India and global markets.</p>
           <div className="t-team-grid">
             {TEAM.map(m => (
               <div key={m.init} className="t-team-card">
-                <div className="t-team-av" style={{ background: m.bg }}> <img
-                src={m.image}
-                alt={m.name}
-                onError={(e) => {
-                e.currentTarget.style.display = "none";
-                e.currentTarget.parentElement!.innerHTML = m.init;
-                }}
-                />
-          </div>
-                
-            <div><div className="t-team-name">{m.name}</div><div className="t-team-title">{m.title}</div><div className="t-team-bio">{m.bio}</div></div>
+                <div className="t-team-av" style={{ background: m.bg }}>
+                  <img src={m.image} alt={m.name}
+                    onError={(e) => { e.currentTarget.style.display = "none"; if (e.currentTarget.parentElement) e.currentTarget.parentElement.innerHTML = `<span style="color:${m.ic};font-family:var(--fh);font-weight:800;font-size:22px">${m.init}</span>`; }} />
+                </div>
+                <div>
+                  <div className="t-team-name">{m.name}</div>
+                  <div className="t-team-title">{m.title}</div>
+                  <div className="t-team-bio">{m.bio}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -678,7 +622,7 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
               <i className="ti ti-rocket" style={{ fontSize: 22, color: "white" }} />
             </div>
             <div>
-              <div style={{ fontSize: 16, fontWeight: 700, color: "var(--charcoal)", marginBottom: 4 }}>Join the team building India's #1 AI Recruitment Platform</div>
+              <div style={{ fontSize: 16, fontWeight: 700, color: "var(--charcoal)", marginBottom: 4 }}>Join the team building India's leading AI Recruitment Platform</div>
               <div style={{ fontSize: 13, color: "var(--gray-500)" }}>Remote-friendly · Performance culture · Learning & growth stipend</div>
             </div>
           </div>
@@ -701,13 +645,27 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
         <div className="t-prose">
           <p>Last updated: January 2026 &nbsp;|&nbsp; Talenti HR Consulting Pvt. Ltd.</p>
           <h3>1. Information We Collect</h3>
-          <p>We collect information you provide directly — including name, email, phone number, company details, and job requirements — when you contact us or submit a form.</p>
+          <p>We collect information you provide directly — including name, email, phone number, company details, and job requirements — when you contact us, submit a form, or use our TalentIQ platform.</p>
           <h3>2. How We Use Your Information</h3>
-          <ul><li>To respond to your recruitment or consulting enquiries</li><li>To match candidates to relevant job opportunities with your consent</li><li>To improve our TalentIQ matching algorithms and service quality</li></ul>
+          <ul>
+            <li>To respond to your recruitment or consulting enquiries</li>
+            <li>To match candidates to relevant opportunities with your explicit consent</li>
+            <li>To improve our TalentIQ platform and service quality</li>
+            <li>To send relevant updates (with opt-out available at any time)</li>
+          </ul>
           <h3>3. Data Storage & Security</h3>
-          <p>All data is stored on secure, encrypted servers in India, compliant with the Information Technology Act, 2000 and Digital Personal Data Protection Act, 2023.</p>
-          <h3>4. Contact</h3>
-          <p>Email: info@talenti.biz &nbsp;·&nbsp; Web: www.talenti.in</p>
+          <p>All data is stored on secure, encrypted servers in India, compliant with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA). We implement industry-standard security measures and conduct regular audits.</p>
+          <h3>4. Your Rights (Data Principal Rights under DPDPA 2023)</h3>
+          <p>As a Data Principal, you have the right to: access your personal data held by us; request correction of inaccurate data; request erasure of your personal data; withdraw consent at any time; and nominate a representative to exercise these rights on your behalf.</p>
+          <p>To exercise any of these rights, contact us at <strong>info@talenti.biz</strong> with the subject line "Data Rights Request". We will respond within 30 days.</p>
+          <h3>5. Consent Withdrawal</h3>
+          <p>You may withdraw consent for data processing at any time by emailing info@talenti.biz. Withdrawal of consent does not affect the lawfulness of processing carried out prior to withdrawal.</p>
+          <h3>6. Data Sharing</h3>
+          <p>We do not sell personal data. We may share data with client companies for agreed placement mandates (with explicit candidate consent), and with technology partners under strict data processing agreements.</p>
+          <h3>7. Cookies</h3>
+          <p>We use essential cookies for site functionality and analytics cookies (with your consent) to improve user experience. You may disable cookies in your browser settings at any time.</p>
+          <h3>8. Contact</h3>
+          <p>Data Fiduciary: Talenti HR Consulting Pvt. Ltd., Noida, India.<br />Email: info@talenti.biz &nbsp;·&nbsp; Web: www.talenti.in</p>
         </div>
       ),
     },
@@ -717,12 +675,31 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
         <div className="t-prose">
           <p>Last updated: January 2026 &nbsp;|&nbsp; Talenti HR Consulting Pvt. Ltd.</p>
           <h3>1. Acceptance of Terms</h3>
-          <p>By accessing talenti.in or engaging Talenti's services, you agree to be bound by these Terms of Service and our Privacy Policy.</p>
+          <p>By accessing talenti.in or engaging Talenti HR Consulting Pvt. Ltd.'s services, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please discontinue use.</p>
           <h3>2. Services Provided</h3>
-          <p>Talenti provides recruitment, executive search, RPO, talent mapping, employer branding, HR outsourcing, and HR consulting services to businesses in India and globally.</p>
-          <h3>3. Governing Law</h3>
+          <p>Talenti provides recruitment, executive search, RPO, talent mapping, employer branding, HR outsourcing, and HR consulting services to businesses in India and globally. Service outcomes depend on mandate complexity, client responsiveness, and market conditions.</p>
+          <h3>3. Client Responsibilities</h3>
+          <ul>
+            <li>Provide accurate and complete job descriptions and requirements promptly</li>
+            <li>Maintain confidentiality of candidate information shared by Talenti</li>
+            <li>Comply with all applicable employment laws when making hiring decisions</li>
+            <li>Pay fees as per the agreed engagement contract</li>
+          </ul>
+          <h3>4. Placement Guarantee</h3>
+          <p>Talenti offers a 90-day replacement guarantee for permanent placements at no additional fee, subject to the following conditions: (a) the original role specification remains materially unchanged; (b) the separation is not due to client-side restructuring, budget withdrawal, or termination of the candidate for cause during probation; and (c) Talenti is notified in writing within the guarantee period. Full terms are set out in the individual engagement contract.</p>
+          <h3>5. Limitation of Liability</h3>
+          <p>Talenti's total liability for any claim arising from our services shall not exceed the fees paid by the client in the preceding three months. We are not liable for indirect, consequential, or incidental damages. Performance metrics referenced on this website represent general outcomes and are not guaranteed for any specific engagement.</p>
+          <h3>6. Recruitment Disclaimer</h3>
+          <p>Talenti Consulting Pvt. Ltd. acts solely as a recruitment and HR consulting partner. Interview schedules, candidate evaluations, selection decisions, compensation offers, joining dates, background verification outcomes, and issuance of offer letters remain solely at the discretion of the respective client organization.
+
+Talenti Consulting Pvt. Ltd. does not guarantee interviews, selection, employment, offer letters, compensation packages, joining dates, or continued employment with any client organization.</p>
+          <h3>7. AI Disclaimer</h3>
+          <p>Our AI tools, including the TalentIQ candidate matching engine, are designed to assist and enhance the recruitment process. While we strive for accuracy and efficiency, AI-generated insights are not infallible and should be used as a decision-support tool alongside human judgment.</p>
+          <h3>8. Intellectual Property</h3>
+          <p>All content on talenti.in, including the TalentIQ platform, brand assets, and recruitment methodologies, are the exclusive intellectual property of Talenti HR Consulting Pvt. Ltd.</p>
+          <h3>9. Governing Law</h3>
           <p>These terms are governed by the laws of India. All disputes shall be subject to the exclusive jurisdiction of courts in Delhi / Noida, India.</p>
-          <h3>4. Contact</h3>
+          <h3>10. Contact</h3>
           <p>info@talenti.biz &nbsp;·&nbsp; +91-8826319888</p>
         </div>
       ),
@@ -746,10 +723,10 @@ function Modal({ id, onClose }: { id: string; onClose: () => void }) {
 }
 
 /* ─────────────────────────────────────────────
-   HERO DASHBOARD
+   HERO DASHBOARD — illustrative demo
 ───────────────────────────────────────────── */
 const HeroDashboard = () => (
-  <div className="t-hero-visual" style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+  <div className="t-hero-visual" style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
     <div className="t-dash-card">
       <div className="t-dc-header">
         <div className="t-dc-dots">
@@ -758,10 +735,11 @@ const HeroDashboard = () => (
           <div className="t-dc-dot" style={{ background: "#28C840" }} />
         </div>
         <div className="t-dc-title">TalentIQ — Candidate Match Engine</div>
-        <div className="t-dc-live">● LIVE</div>
+        {/* LEGAL FIX: changed from ● LIVE to ● Demo */}
+        <div className="t-dc-live">● Demo</div>
       </div>
       <div className="t-dc-body">
-        <div className="t-dc-sec-title">Top AI-Matched Candidates</div>
+        <div className="t-dc-sec-title">Sample AI-Matched Candidates</div>
         {[
           { init: "AR", bg: "#EFF6FF", ic: "#2563EB", name: "Arjun Rawat",    role: "Senior Backend Engineer · 7 yrs", pct: 96, pctColor: "#16A34A", barGrad: "linear-gradient(90deg,#2563EB,#16A34A)" },
           { init: "PR", bg: "#F0F4FF", ic: "#4F46E5", name: "Priya Rajan",    role: "Product Manager · 5 yrs",         pct: 91, pctColor: "#2563EB", barGrad: "linear-gradient(90deg,#4F46E5,#2563EB)" },
@@ -783,9 +761,11 @@ const HeroDashboard = () => (
         <div className="t-dc-chip">Schedule Interviews →</div>
       </div>
     </div>
+    {/* LEGAL FIX: illustrative disclaimer */}
+    <p className="t-dc-demo-note" style={{ marginTop: 10 }}>Illustrative output — sample from TalentIQ platform. Names shown are fictional.</p>
     <div className="t-float-badge t-fb1">
       <div className="t-fb-icon" style={{ background: "#DCFCE7" }}><Ic name="bolt" style={{ fontSize: 14, color: "#16A34A" }} /></div>
-      <span>60% Faster Hiring</span>
+      <span>Faster Hiring</span>
     </div>
     <div className="t-float-badge t-fb2">
       <div className="t-fb-icon" style={{ background: "#EFF6FF" }}><Ic name="brain" style={{ fontSize: 14, color: "#2563EB" }} /></div>
@@ -795,21 +775,24 @@ const HeroDashboard = () => (
 );
 
 /* ─────────────────────────────────────────────
-   AI MOCKUP
+   AI MOCKUP — illustrative demo
 ───────────────────────────────────────────── */
 const AIMockup = () => {
   const candidates = [
-    { init: "AK", bg: "rgba(37,99,235,0.3)",   ic: "#93C5FD", name: "Amit Kumar",   skills: ["PySpark","AWS","Kafka"],       pct: 94 },
-    { init: "NS", bg: "rgba(79,70,229,0.25)",  ic: "#A5B4FC", name: "Nidhi Sharma", skills: ["Databricks","Python","dbt"],   pct: 89 },
-    { init: "RV", bg: "rgba(200,169,107,0.2)", ic: "#C8A96B", name: "Rohan Verma",  skills: ["BigQuery","Airflow"],          pct: 82 },
+    { init: "AK", bg: "rgba(37,99,235,0.3)",   ic: "#93C5FD", name: "Amit Kumar",   skills: ["PySpark","AWS","Kafka"],     pct: 94 },
+    { init: "NS", bg: "rgba(79,70,229,0.25)",  ic: "#A5B4FC", name: "Nidhi Sharma", skills: ["Databricks","Python","dbt"], pct: 89 },
+    { init: "RV", bg: "rgba(200,169,107,0.2)", ic: "#C8A96B", name: "Rohan Verma",  skills: ["BigQuery","Airflow"],        pct: 82 },
   ];
   return (
     <div className="t-ai-mockup">
       <div className="t-ai-mok-head">
         <div className="t-ai-mok-title">🧠 TalentIQ — Match Engine v2.4</div>
-        <div className="t-ai-live">● Processing</div>
+        {/* LEGAL FIX: changed from ● Processing to ● Demo */}
+        <div className="t-ai-demo">● Demo</div>
       </div>
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "#475569", marginBottom: 12 }}>Candidates ranked for: Senior Data Engineer</div>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "#475569", marginBottom: 12 }}>
+        Sample output — Senior Data Engineer
+      </div>
       {candidates.map(c => (
         <div className="t-ai-row" key={c.init}>
           <div className="t-ai-av" style={{ background: c.bg, color: c.ic }}>{c.init}</div>
@@ -824,20 +807,22 @@ const AIMockup = () => {
         </div>
       ))}
       <div className="t-ai-insights">
-        {[["2.3s","Screening time"],["147","CVs processed"],["12","Shortlisted"],["96%","Accuracy"]].map(([v,l]) => (
+        {[["2.3s","Screening time"],["147","CVs processed"],["12","Shortlisted"],["High","Match accuracy"]].map(([v,l]) => (
           <div key={l} className="t-ai-ins"><div className="t-ai-ins-val">{v}</div><div className="t-ai-ins-lbl">{l}</div></div>
         ))}
       </div>
       <div style={{ marginTop: 16, padding: "12px 14px", background: "rgba(37,99,235,0.12)", borderRadius: 10, border: "1px solid rgba(37,99,235,0.2)" }}>
         <div style={{ fontSize: 11, fontWeight: 700, color: "#93C5FD", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 4 }}>AI Insight</div>
-        <div style={{ fontSize: 12, color: "#64748B", lineHeight: 1.6 }}>Top 3 candidates show strong alignment with your team's tech stack. Recommend fast-tracking Amit & Nidhi for L1 interviews.</div>
+        <div style={{ fontSize: 12, color: "#64748B", lineHeight: 1.6 }}>Top 3 candidates show strong alignment with the role's tech stack. Recommend fast-tracking Amit & Nidhi for L1 interviews.</div>
       </div>
+      {/* LEGAL FIX: illustrative disclaimer */}
+      <p className="t-ai-mockup-note">Illustrative output — sample from TalentIQ platform. Names shown are fictional.</p>
     </div>
   );
 };
 
 /* ─────────────────────────────────────────────
-   PROCESS TIMELINE SECTION
+   PROCESS TIMELINE
 ───────────────────────────────────────────── */
 const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
   <section id="process" className="t-section t-process" aria-labelledby="process-h">
@@ -847,15 +832,11 @@ const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
         <h2 className="t-sec-title" id="process-h">From Brief to Hire in 14 Days</h2>
         <p className="t-sec-sub">Our AI-powered process delivers a qualified shortlist in days, not weeks — every time.</p>
       </div>
-
       <div className="t-timeline">
         <div className="t-timeline-track">
           {TIMELINE_STEPS.map((step) => (
             <div className="t-tl-step t-fade" key={step.day}>
-              <div
-                className={`t-tl-node${step.ai ? " ai" : ""}`}
-                style={!step.ai ? { background: step.color } : undefined}
-              >
+              <div className={`t-tl-node${step.ai ? " ai" : ""}`} style={!step.ai ? { background: step.color } : undefined}>
                 <Ic name={step.icon} style={{ fontSize: 22, color: step.ai ? "white" : step.iconColor }} />
               </div>
               <div>
@@ -867,12 +848,11 @@ const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
             </div>
           ))}
         </div>
-
-        {/* Outcome bar */}
+        {/* LEGAL FIX: single consistent retention figure (92%), guarantee qualified with T&Cs */}
         <div className="t-tl-outcome t-fade">
           <div>
             <div className="t-tl-outcome-text">Offer accepted. Talent secured.</div>
-            <div className="t-tl-outcome-sub">End-to-end managed process with dedicated account team · 90-day replacement guarantee included</div>
+            <div className="t-tl-outcome-sub">End-to-end managed process with dedicated account team · 90-day replacement guarantee*</div>
           </div>
           <div style={{ display: "flex", gap: 32, flexWrap: "wrap", alignItems: "center" }}>
             <div className="t-tl-outcome-stat">
@@ -880,18 +860,18 @@ const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
               <div className="t-tl-outcome-lbl">Offer acceptance ratio</div>
             </div>
             <div className="t-tl-outcome-stat">
-              <div className="t-tl-outcome-val">98%</div>
+              <div className="t-tl-outcome-val">92%</div>
               <div className="t-tl-outcome-lbl">Retention at 12 months</div>
             </div>
-            <button
-              onClick={() => scrollTo("contact")}
-              className="t-btn"
-              style={{ background: "white", color: "var(--blue)", fontWeight: 700, padding: "12px 24px", borderRadius: 10, fontSize: 14 }}
-            >
+            <button onClick={() => scrollTo("contact")} className="t-btn"
+              style={{ background: "white", color: "var(--blue)", fontWeight: 700, padding: "12px 24px", borderRadius: 10, fontSize: 14 }}>
               Start Your 14-Day Hire <Ic name="arrow-right" />
             </button>
           </div>
         </div>
+        <p style={{ fontSize: 11, color: "var(--gray-400)", marginTop: 12, fontStyle: "italic" }}>
+          *90-day replacement guarantee is subject to engagement terms and conditions. Results may vary by role complexity and industry.
+        </p>
       </div>
     </div>
   </section>
@@ -908,15 +888,13 @@ export default function TalentiWebsite() {
   const [countersRun, setCountersRun] = useState(false);
   const statsRef = useRef(null);
 
-  // ── Form state ──
-  const [form, setForm]           = useState({ name: "", company: "", email: "", phone: "", service: "", message: "" });
+  const [form, setForm]               = useState({ name: "", company: "", email: "", phone: "", service: "", message: "" });
   const [formLoading, setFormLoading] = useState(false);
   const [formError, setFormError]     = useState("");
 
   const openModal  = useCallback((id: string) => setModal(id), []);
   const closeModal = useCallback(() => setModal(null), []);
 
-  /* Load external CSS */
   useEffect(() => {
     const hrefs = [
       "https://cdn.jsdelivr.net/npm/@fontsource/sora@5.0.17/400.css",
@@ -930,20 +908,17 @@ export default function TalentiWebsite() {
     ];
     hrefs.forEach(href => {
       if (!document.querySelector(`link[href="${href}"]`)) {
-        const el = document.createElement("link");
-        el.rel = "stylesheet"; el.href = href;
+        const el = document.createElement("link"); el.rel = "stylesheet"; el.href = href;
         document.head.appendChild(el);
       }
     });
   }, []);
 
-  /* Body scroll lock for mobile nav */
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  /* Scroll-triggered fade-in */
   useEffect(() => {
     const els = document.querySelectorAll(".t-fade");
     const obs = new IntersectionObserver(entries => {
@@ -955,7 +930,6 @@ export default function TalentiWebsite() {
     return () => obs.disconnect();
   });
 
-  /* Counter animation */
   useEffect(() => {
     if (!statsRef.current || countersRun) return;
     const obs = new IntersectionObserver(([e]) => {
@@ -965,26 +939,22 @@ export default function TalentiWebsite() {
     return () => obs.disconnect();
   }, [countersRun]);
 
-  /* ── Contact form submit ── */
-  const handleInput  = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => setForm(f => ({ ...f, [e.target.name]: e.target.value })), []);
+  const handleInput = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+    setForm(f => ({ ...f, [e.target.name]: e.target.value })), []);
+
   const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormError("");
-
     if (!form.name || !form.company || !form.email) {
       setFormError("Please fill in your name, company, and email.");
       return;
     }
-
     setFormLoading(true);
     try {
       const res  = await fetch("/api/contact", {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify(form),
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form),
       });
       const data = await res.json();
-
       if (!res.ok) {
         setFormError(data.error || "Something went wrong. Please try again.");
         setToast({ message: "❌ Failed to send. Please try again.", type: "error" });
@@ -1003,7 +973,6 @@ export default function TalentiWebsite() {
 
   const toggleFaq = useCallback((i: number) => setActiveFaq(v => v === i ? null : i), []);
 
-  /* Animated counter */
   const Counter = ({ val, suffix }: { val: string | number; suffix: string }) => {
     const [display, setDisplay] = useState("0");
     useEffect(() => {
@@ -1028,7 +997,7 @@ export default function TalentiWebsite() {
     <>
       <style dangerouslySetInnerHTML={{ __html: GLOBAL_CSS }} />
 
-      {/* ── MOBILE NAV ── */}
+      {/* MOBILE NAV */}
       {mobileOpen && (
         <nav className="t-mobile-nav open" role="dialog" aria-label="Mobile navigation">
           <div className="t-mob-head">
@@ -1050,7 +1019,7 @@ export default function TalentiWebsite() {
         </nav>
       )}
 
-      {/* ── NAV ── */}
+      {/* NAV */}
       <nav className="t-nav" role="navigation" aria-label="Main navigation">
         <div className="t-container">
           <div className="t-nav-inner">
@@ -1071,7 +1040,7 @@ export default function TalentiWebsite() {
         </div>
       </nav>
 
-      {/* ── HERO ── */}
+      {/* HERO */}
       <header className="t-hero" id="hero">
         <div className="t-container">
           <div className="t-hero-grid">
@@ -1083,8 +1052,9 @@ export default function TalentiWebsite() {
                 <button onClick={() => scrollTo("contact")} className="t-btn t-btn-primary t-btn-xl"><Ic name="calendar-plus" /> Book Consultation</button>
                 <button onClick={() => scrollTo("services")} className="t-btn t-btn-outline t-btn-xl">Explore Services <Ic name="arrow-right" /></button>
               </div>
+              {/* LEGAL FIX: retention stat uses 92% consistently */}
               <div className="t-hero-stats" ref={statsRef}>
-                {[["10000","+","Placements Made"],["150","+","Enterprise Clients"],["98","%","Retention Rate"],["14","+","Days Avg. Hire"]].map(([val,suf,lbl]) => (
+                {[["10000","+","Placements Made"],["150","+","Enterprise Clients"],["92","%","Retention Rate"],["14","+","Days Avg. Hire"]].map(([val,suf,lbl]) => (
                   <div key={lbl}>
                     <div className="t-stat-val"><Counter val={parseInt(val)} suffix={suf} /></div>
                     <div className="t-stat-lbl">{lbl}</div>
@@ -1097,31 +1067,25 @@ export default function TalentiWebsite() {
         </div>
       </header>
 
-      {/* ── TRUST / CLIENT LOGOS ── */}
+      {/* TRUST / CLIENT LOGOS */}
       <section className="t-trust" aria-label="Client trust indicators">
         <div className="t-container">
           <p className="t-trust-label">Trusted by 150+ companies across India, APAC, Middle East &amp; Europe</p>
-          {/*
-            DROP your logo files into:
-              public/images/logos/clients/toshiba.png
-              public/images/logos/clients/wipro.png
-              ... (see CLIENT_LOGOS array above for all filenames)
-            Placeholders show automatically until files are present.
-          */}
           <div className="t-client-logos">
             {CLIENT_LOGOS.map(logo => (
               <ClientLogoItem key={logo.name} name={logo.name} file={logo.file} />
             ))}
           </div>
+          {/* LEGAL FIX: retention stat 92% consistent; 500K+ candidate profiles (not "pre-screened") */}
           <div className="t-metrics">
-            {[["10,000+","Successful Placements"],["14 Days","Avg. Time-to-Hire"],["98%","Candidate Retention"],["500K+","Resume Database"]].map(([v,l]) => (
+            {[["10,000+","Successful Placements"],["14 Days","Avg. Time-to-Hire"],["92%","Candidate Retention"],["500K+","Candidate Profiles"]].map(([v,l]) => (
               <div key={l} className="t-metric t-fade"><div className="t-metric-val">{v}</div><div className="t-metric-lbl">{l}</div></div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
+      {/* SERVICES */}
       <section id="services" className="t-section" style={{ background: "white" }} aria-labelledby="svc-h">
         <div className="t-container">
           <div className="t-sec-header">
@@ -1133,8 +1097,7 @@ export default function TalentiWebsite() {
             {SERVICES.map(s => (
               <article key={s.title} className="t-svc-card t-fade">
                 <div className="t-svc-icon" style={{ background: s.bg }}><i className={`ti ti-${s.icon}`} style={{ fontSize: 22, color: s.ic }} /></div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+                <h3>{s.title}</h3><p>{s.desc}</p>
                 <span className="t-svc-link">Learn more <Ic name="arrow-right" /></span>
               </article>
             ))}
@@ -1142,17 +1105,17 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── PROCESS TIMELINE ── */}
+      {/* PROCESS TIMELINE */}
       <ProcessTimeline scrollTo={scrollTo} />
 
-      {/* ── AI PLATFORM ── */}
+      {/* AI PLATFORM */}
       <section id="ai-platform" className="t-section t-ai" aria-labelledby="ai-h">
         <div className="t-container">
           <div className="t-ai-grid">
             <div>
               <div className="t-sec-tag t-tag-white">TalentIQ Platform</div>
               <h2 className="t-sec-title" id="ai-h">Recruitment Powered by <span style={{ color: "#93C5FD" }}>TalentIQ</span></h2>
-              <p className="t-sec-sub">Our proprietary TalentIQ recruitment platform eliminates bias, accelerates screening, and surfaces the highest-quality candidates — at enterprise scale.</p>
+              <p className="t-sec-sub">Our proprietary TalentIQ recruitment platform eliminates bias, accelerates screening, and surfaces the highest-quality candidates — at enterprise scale across India and global markets.</p>
               <div className="t-ai-features">
                 {AI_FEATURES.map(f => (
                   <div key={f.title} className="t-ai-feat t-fade">
@@ -1167,7 +1130,7 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── INDUSTRIES ── */}
+      {/* INDUSTRIES */}
       <section id="industries" className="t-section t-ind" aria-labelledby="ind-h">
         <div className="t-container">
           <div className="t-sec-header">
@@ -1175,7 +1138,7 @@ export default function TalentiWebsite() {
             <h2 className="t-sec-title" id="ind-h">Deep Domain Expertise Across Sectors</h2>
             <p className="t-sec-sub">Specialist recruiters with industry-specific knowledge ensuring culture-fit and domain-relevant placements in every engagement.</p>
           </div>
-          <div className="t-ind-grid">
+          <div className="t-ind-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
             {INDUSTRIES.map(ind => (
               <article key={ind.title} className="t-ind-card t-fade">
                 <div className="t-ind-icon"><Ic name={ind.icon} style={{ fontSize: 20, color: "var(--blue)" }} /></div>
@@ -1186,7 +1149,7 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── WHY TALENTI ── */}
+      {/* WHY TALENTI */}
       <section id="why-talenti" className="t-section" style={{ background: "white" }} aria-labelledby="why-h">
         <div className="t-container">
           <div className="t-sec-header">
@@ -1201,8 +1164,7 @@ export default function TalentiWebsite() {
                 <div className="t-why-icon" style={{ background: w.bg || "var(--blue-50)" }}>
                   <Ic name={w.icon} style={{ fontSize: 24, color: w.ic || "var(--blue)" }} />
                 </div>
-                <h3>{w.title}</h3>
-                <p>{w.desc}</p>
+                <h3>{w.title}</h3><p>{w.desc}</p>
                 <span className="t-why-hl" style={{ background: w.bg || "var(--blue-50)", color: w.ic || "var(--blue)" }}>
                   <Ic name={w.hlIc} style={{ fontSize: 13 }} /> {w.hl}
                 </span>
@@ -1212,13 +1174,13 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
+      {/* TESTIMONIALS */}
       <section id="testimonials" className="t-section t-test" aria-labelledby="test-h">
         <div className="t-container">
           <div className="t-sec-header">
             <div className="t-sec-tag t-tag-blue">Client Testimonials</div>
             <h2 className="t-sec-title" id="test-h">What Our Clients Say</h2>
-            <p className="t-sec-sub">Hear from HR leaders and business heads who transformed their talent acquisition with Talenti.</p>
+            <p className="t-sec-sub">Hear from HR leaders and business heads who have worked with Talenti to improve their talent acquisition.</p>
           </div>
           <div className="t-test-grid">
             {TESTIMONIALS.map(t => (
@@ -1236,10 +1198,14 @@ export default function TalentiWebsite() {
               </article>
             ))}
           </div>
+          {/* LEGAL FIX: testimonial disclaimer */}
+          <p className="t-test-disclaimer">
+            Testimonials reflect individual client experiences. Client names and company details have been partially anonymised at their request. Individual results may vary based on mandate complexity, industry, and hiring volumes.
+          </p>
         </div>
       </section>
 
-      {/* ── FAQ + GEO ── */}
+      {/* FAQ + GEO */}
       <section id="faq" className="t-section" style={{ background: "white" }} aria-labelledby="faq-h">
         <div className="t-container">
           <div className="t-sec-header" style={{ marginBottom: 48 }}>
@@ -1264,7 +1230,8 @@ export default function TalentiWebsite() {
             <aside className="t-geo-box">
               <div className="t-sec-tag t-tag-blue" style={{ marginBottom: 14 }}>AI Recruitment Insights</div>
               <h3>The Future of Hiring is AI-First</h3>
-              <p>India's recruitment market is undergoing fundamental transformation. By 2026, over 70% of enterprise hiring decisions will involve AI assistance at some stage of the pipeline.</p>
+              {/* LEGAL FIX: "Industry analysts project" instead of stating as fact; no specific unattributed % */}
+              <p>India's recruitment market is undergoing significant transformation. Industry analysts increasingly project that a large majority of enterprise hiring decisions will involve some form of AI assistance within this decade.</p>
               <p>Talenti HR Consulting Pvt Ltd is at the forefront of this shift, combining human judgment with AI to deliver recruitment outcomes that neither could achieve alone.</p>
               <div className="t-geo-tags">
                 {["AI Recruitment India","Executive Search","HR Consulting","IT Staffing","RPO Services","Talent Mapping","Employer Branding","PAN India Hiring","BFSI Recruitment","CXO Search","Smart ATS","Candidate Matching"].map(t => (
@@ -1276,7 +1243,7 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── BLOG ── */}
+      {/* BLOG */}
       <section id="blog" className="t-section t-blog" aria-labelledby="blog-h">
         <div className="t-container">
           <div className="t-sec-header">
@@ -1290,8 +1257,7 @@ export default function TalentiWebsite() {
                 <div className="t-blog-thumb" style={{ background: b.bg }}><Ic name={b.ic} style={{ fontSize: 48, color: b.icColor }} /></div>
                 <div className="t-blog-body">
                   <div className="t-blog-cat">{b.cat}</div>
-                  <h3>{b.title}</h3>
-                  <p>{b.desc}</p>
+                  <h3>{b.title}</h3><p>{b.desc}</p>
                   <div className="t-blog-meta">
                     <span>{b.date}</span>
                     <span className="t-read-more">Read more <Ic name="arrow-right" style={{ fontSize: 12 }} /></span>
@@ -1306,7 +1272,7 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── CONTACT ── */}
+      {/* CONTACT */}
       <section id="contact" className="t-section" style={{ background: "white" }} aria-labelledby="contact-h">
         <div className="t-container">
           <div className="t-contact-grid">
@@ -1347,30 +1313,25 @@ export default function TalentiWebsite() {
                   <textarea className="t-form-inp" id="message" name="message" placeholder="E.g. We need 10 senior engineers in Bangalore over the next quarter..." value={form.message} onChange={handleInput} disabled={formLoading} />
                 </div>
                 {formError && <p className="t-form-error"><Ic name="alert-circle" style={{ fontSize: 13, marginRight: 4 }} />{formError}</p>}
-                <button
-                  type="submit"
-                  className="t-btn t-btn-primary"
+                <button type="submit" className="t-btn t-btn-primary"
                   style={{ padding: "14px 28px", fontSize: 15, justifyContent: "center", opacity: formLoading ? 0.7 : 1 }}
-                  disabled={formLoading}
-                >
+                  disabled={formLoading}>
                   {formLoading
                     ? <><Ic name="loader-2" style={{ fontSize: 16, animation: "spin 1s linear infinite" }} /> Sending...</>
-                    : <><Ic name="send" /> Send Enquiry</>
-                  }
+                    : <><Ic name="send" /> Send Enquiry</>}
                 </button>
                 <p style={{ fontSize: 12, color: "var(--gray-400)" }}>We typically respond within 4 business hours.</p>
               </form>
             </div>
 
-            {/* Contact Info */}
             <div style={{ paddingTop: 8 }}>
               <div className="t-sec-tag t-tag-gold" style={{ marginBottom: 20 }}>Contact Details</div>
               <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 24 }}>We're here to help you hire better</h3>
               {[
-                { icon: "mail",    label: "Email Us",      val: "info@talenti.biz" },
-                { icon: "phone",   label: "Call Us",       val: "+91-8826319888" },
-                { icon: "map-pin", label: "Headquarters",  val: "1108, T1, Assotech Business Cresterra, Sector 135, Noida, India", sub: "Pan-India · APAC · Middle East · Europe" },
-                { icon: "clock",   label: "Working Hours", val: "Mon – Sat · 9:00 AM – 7:00 PM IST" },
+                { icon: "mail",    label: "Email Us",     val: "info@talenti.biz" },
+                { icon: "phone",   label: "Call Us",      val: "+91-8826319888" },
+                { icon: "map-pin", label: "Headquarters", val: "1108, T1, Assotech Business Cresterra, Sector 135, Noida, India", sub: "Pan-India · APAC · Middle East · Europe" },
+                { icon: "clock",   label: "Working Hours",val: "Mon – Sat · 9:00 AM – 7:00 PM IST" },
               ].map(c => (
                 <div key={c.label} className="t-contact-det">
                   <Ic name={c.icon} style={{ fontSize: 18, color: "var(--blue)", marginTop: 2 }} />
@@ -1405,7 +1366,7 @@ export default function TalentiWebsite() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
+      {/* FOOTER */}
       <footer className="t-footer" role="contentinfo">
         <div className="t-container">
           <div className="t-footer-grid">
@@ -1419,26 +1380,26 @@ export default function TalentiWebsite() {
             </div>
             {[
               { heading: "Services", links: [
-                { label: "Permanent Hiring",  action: () => scrollTo("services") },
-                { label: "Executive Search",  action: () => scrollTo("services") },
-                { label: "IT Recruitment",    action: () => scrollTo("services") },
-                { label: "RPO Solutions",     action: () => scrollTo("services") },
-                { label: "HR Consulting",     action: () => scrollTo("services") },
-                { label: "Talent Mapping",    action: () => scrollTo("services") },
+                { label: "Permanent Hiring", action: () => scrollTo("services") },
+                { label: "Executive Search", action: () => scrollTo("services") },
+                { label: "IT Recruitment",   action: () => scrollTo("services") },
+                { label: "RPO Solutions",    action: () => scrollTo("services") },
+                { label: "HR Consulting",    action: () => scrollTo("services") },
+                { label: "Talent Mapping",   action: () => scrollTo("services") },
               ]},
               { heading: "Company", links: [
-                { label: "About Us",          action: () => openModal("about") },
-                { label: "Leadership Team",   action: () => openModal("leadership") },
-                { label: "Why Talenti",       action: () => scrollTo("why-talenti") },
-                { label: "Our Process",       action: () => scrollTo("process") },
-                { label: "Insights Blog",     action: () => scrollTo("blog") },
-                { label: "Careers",           action: () => openModal("careers") },
+                { label: "About Us",        action: () => openModal("about") },
+                { label: "Leadership Team", action: () => openModal("leadership") },
+                { label: "Why Talenti",     action: () => scrollTo("why-talenti") },
+                { label: "Our Process",     action: () => scrollTo("process") },
+                { label: "Insights Blog",   action: () => scrollTo("blog") },
+                { label: "Careers",         action: () => openModal("careers") },
               ]},
               { heading: "Connect", links: [
-                { label: "Contact Us",        action: () => scrollTo("contact") },
-                { label: "info@talenti.biz",  action: () => window.location.href = "mailto:info@talenti.biz" },
-                { label: "Privacy Policy",    action: () => openModal("privacy") },
-                { label: "Terms of Service",  action: () => openModal("terms") },
+                { label: "Contact Us",       action: () => scrollTo("contact") },
+                { label: "info@talenti.biz", action: () => { window.location.href = "mailto:info@talenti.biz"; } },
+                { label: "Privacy Policy",   action: () => openModal("privacy") },
+                { label: "Terms of Service", action: () => openModal("terms") },
               ]},
             ].map(col => (
               <div key={col.heading} className="t-footer-col">
@@ -1452,7 +1413,8 @@ export default function TalentiWebsite() {
                       { icon: "brand-linkedin", label: "LinkedIn", url: "https://www.linkedin.com/company/talenti-hr-consulting-pvt--ltd-/" },
                       { icon: "brand-facebook", label: "Facebook", url: "https://www.facebook.com/talentijobs/" },
                     ].map(({ icon, label, url }) => (
-                      <div key={icon} className="t-fsoc" role="button" aria-label={label} onClick={() => window.open(url,"_blank","noopener")} style={{ cursor: "pointer" }}>
+                      <div key={icon} className="t-fsoc" role="button" aria-label={label}
+                        onClick={() => window.open(url,"_blank","noopener")} style={{ cursor: "pointer" }}>
                         <Ic name={icon} style={{ fontSize: 16 }} />
                       </div>
                     ))}
@@ -1461,17 +1423,16 @@ export default function TalentiWebsite() {
               </div>
             ))}
           </div>
+          {/* LEGAL FIX: © 2009–2026 */}
           <div className="t-footer-bottom">
-            <p className="t-footer-copy">© 2026 Talenti HR Consulting Pvt. Ltd. All rights reserved. &nbsp;·&nbsp; www.talenti.in</p>
+            <p className="t-footer-copy">© 2009–2026 Talenti HR Consulting Pvt. Ltd. All rights reserved. &nbsp;·&nbsp; www.talenti.in</p>
             <p className="t-footer-copy" style={{ color: "var(--gray-600)" }}>Est. 2009 · India · APAC · Middle East · Europe</p>
           </div>
         </div>
       </footer>
 
-      {/* ── MODAL ── */}
       {modal && <Modal id={modal} onClose={closeModal} />}
 
-      {/* ── TOAST ── */}
       {toast && (
         <div className={`t-toast t-toast-${toast?.type}`}>
           <Ic name={toast?.type === "success" ? "circle-check" : "alert-circle"} style={{ fontSize: 18, color: toast?.type === "success" ? "#22C55E" : "#DC2626" }} />
@@ -1479,7 +1440,6 @@ export default function TalentiWebsite() {
         </div>
       )}
 
-      {/* Spinner keyframe */}
       <style>{`@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}`}</style>
     </>
   );
