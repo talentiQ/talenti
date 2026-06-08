@@ -852,7 +852,7 @@ const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
         <div className="t-tl-outcome t-fade">
           <div>
             <div className="t-tl-outcome-text">Offer accepted. Talent secured.</div>
-            <div className="t-tl-outcome-sub">End-to-end managed process with dedicated account team · 90-day replacement guarantee*</div>
+            <div className="t-tl-outcome-sub">End-to-end managed process with dedicated account team ·</div>
           </div>
           <div style={{ display: "flex", gap: 32, flexWrap: "wrap", alignItems: "center" }}>
             <div className="t-tl-outcome-stat">
@@ -869,10 +869,7 @@ const ProcessTimeline = ({ scrollTo }: { scrollTo: (id: string) => void }) => (
             </button>
           </div>
         </div>
-        <p style={{ fontSize: 11, color: "var(--gray-400)", marginTop: 12, fontStyle: "italic" }}>
-          *90-day replacement guarantee is subject to engagement terms and conditions. Results may vary by role complexity and industry.
-        </p>
-      </div>
+        </div>
     </div>
   </section>
 );
