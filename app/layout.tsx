@@ -1,5 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import type { Metadata, Viewport } from "next";
+import JsonLd from "@/components/JsonLd";
 
 // ─────────────────────────────────────────────────────────────────
 //  METADATA
